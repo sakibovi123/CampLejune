@@ -1,0 +1,27 @@
+.card img{
+    width: 30%;
+    text-align: center;
+    justify-content: center;
+}
+.card-img{
+    text-align: center;
+    justify-content: center;
+}
+
+.card{
+    padding: 20px;
+    border: 2px solid rgb(240, 236, 236);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    
+}
+
+.card-group{
+    margin-top: -80px;
+}
+.card-body{
+    text-align: center;
+}
+
+.card-title{
+    font-weight: 700;
+}
