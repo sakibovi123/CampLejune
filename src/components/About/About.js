@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import about from '../../assets/about.jpg';
+import about from '../../assets/about.jfif';
 
 const About = () => {
     return (
@@ -8,7 +8,7 @@ const About = () => {
             <div className='container'>
                 <div className='row'>
                     <div className='col-md-6'>
-                        <img src={about} alt="" />
+                        <img width={580} height={500} src={about} alt="" />
                     </div>
 
                     <div className='col-md-6'>

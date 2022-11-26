@@ -21,8 +21,8 @@ class Header extends Component {
             />{' '}</Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text> <h2>Over $1 Billion Recovered</h2>
-            <p>in Verdicts & Settlements*</p>
+          <Navbar.Text> <h2 className='over'>Over $1 Billion Recovered</h2>
+            <p className='settle'>in Verdicts & Settlements*</p>
           </Navbar.Text>
         </Navbar.Collapse>
       </Container>

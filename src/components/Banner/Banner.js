@@ -51,8 +51,8 @@ const Banner = () => {
   }
 
   return (
-    <div className='banner' id='home'>
-      <Container>
+    <div className='banner banner-text' id='home'>
+      <Container className=''>
         <Row className='align-items-center'>
           <Col xs={12} md={6} xl={7}>
             <div className='article'>
@@ -107,7 +107,7 @@ const Banner = () => {
 
               <label>
                 Gender:
-                <div>
+                <div className='radio'>
                   <input onchange={onChange} type="radio" value="Male" name='gender' checked={form.gender === 'Male'} />Male
                   <input onchange={onChange} type="radio" value="Female" name='gender' checked={form.gender === 'Female'} />Female
                   <input onchange={onChange} type="radio" value="Other" name='gender' checked={form.gender === 'Other'} />Other
