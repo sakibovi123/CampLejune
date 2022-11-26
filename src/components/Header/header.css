@@ -1,4 +1,4 @@
-nav {
+/* nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -7,10 +7,7 @@ nav {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
   }
 
-  /* .header{
-    padding-left: 50px;
-    padding-right: 50px;
-  } */
+  
   #navbar {
     display: flex;
     align-items: center;
@@ -73,7 +70,7 @@ nav {
     font-size: 1.3rem;
     padding-left: 10px;
     font-weight: 700;
-    /* text-decoration: none; */
+    
     color: rgb(54, 33, 173);
   }
   
@@ -115,4 +112,4 @@ nav {
       font-size: 24px;
       cursor: pointer;
     }
-  }
+  } */
