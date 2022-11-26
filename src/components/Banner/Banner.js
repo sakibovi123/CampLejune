@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import CallSec from '../subHeader/CallSec';
 import './banner.css';
 
 
@@ -51,6 +52,8 @@ const Banner = () => {
   }
 
   return (
+    <div>
+    <CallSec />
     <div className='banner banner-text' id='home'>
       <Container className=''>
         <Row className='align-items-center'>
@@ -130,7 +133,7 @@ const Banner = () => {
           </Col>
         </Row>
       </Container>
-
+</div>
     </div>
   )
 }
