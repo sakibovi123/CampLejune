@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer';
 import Privacy from './pages/Privacy/Privacy';
 import Terms from './pages/Terms/Terms';
 import Thanks from './pages/Thanks/Thanks';
+import NotFound from './pages/NotFound/NotFound';
 
 
 function App() {
@@ -19,7 +20,9 @@ function App() {
         <Route path='/privacy-policy' element={<Privacy />}></Route>
         <Route path='/terms-condition' element={<Terms />}></Route>
         <Route path='/thanks' element={<Thanks />}></Route>
+        <Route path='*' element={<NotFound />}></Route>
       </Routes>
+
       <Footer />
     </>
   );
