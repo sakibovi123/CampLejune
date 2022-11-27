@@ -1,5 +1,6 @@
 .banner {
-    background-image: url(../../assets/banner.jpg);
+    /* background-image: url(../../assets/banner4.jpg); */
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("https://api.asm.skype.com/v1/objects/0-ea-d4-e3a48f5f72572dcdaf37e7abc20bd9c1/views/imgpsh_fullsize_anim");
     background-position: center;
     background-size: cover;
     height: 100%;
@@ -135,7 +136,7 @@ button {
     color: #fff;
     font-weight: 600;
     margin-left: 80px;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)); */
     border: 10px inset #fff;
 }
 
@@ -170,7 +171,8 @@ button {
     }
 
     .banner-form {
-        margin-left: 0;
+        margin-left: 20px;
         margin-bottom: 40px;
+        
     }
 }
