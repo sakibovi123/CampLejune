@@ -12,6 +12,7 @@
 }
 .card-title{
     margin-bottom: 20px;
+    font-weight: 700;
 }
 .card-mute{
     padding: 40px;
@@ -69,4 +70,8 @@
       transform: rotate3d(0, 0, 1, 0deg);
     }
   
+  }
+  .card-text{
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
