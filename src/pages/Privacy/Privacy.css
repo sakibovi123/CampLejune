@@ -1,0 +1,21 @@
+.weare{
+    font-weight: 700;
+}
+.privacy{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.privacy h2{
+font-weight: 700;
+}
+.privacy p a{
+    text-decoration: none;
+    color: #FD5D14;
+}
+.privacy p a:hover{
+    color: #1443fd;
+}
+.privacy .ptext{
+    color: #FD5D14;
+    font-weight: 600;
+}

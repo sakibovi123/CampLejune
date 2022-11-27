@@ -1,0 +1,10 @@
+.terms{
+    padding: 20px;
+}
+.terms h2{
+    color: black;
+    font-weight: 700;
+}
+.terms p .paid{
+    font-weight: 600;
+}

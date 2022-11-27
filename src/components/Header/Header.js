@@ -3,6 +3,7 @@ import './header.css';
 import logo from '../../assets/logo.png';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import CallSec from '../subHeader/CallSec';
 
 class Header extends Component {
   state = { clicked: false };
@@ -12,6 +13,7 @@ class Header extends Component {
   }
   render() {
     return (
+      <div>
       <Navbar>
       <Container>
         <Navbar.Brand href="#home"><img
@@ -27,6 +29,8 @@ class Header extends Component {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    <CallSec />
+    </div>
     )
   }
 

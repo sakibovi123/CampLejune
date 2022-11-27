@@ -11,7 +11,7 @@
 
 
 .footer-text{
-    color: #fff;
+    color: rgb(206,206,206);
     margin-top: 20px;
 }
 .footer-text p{
@@ -22,7 +22,7 @@
 }
 .second1 a{
     text-decoration: none;
-    color: #fff;
+    color: rgb(206,206,206);
     font-size: 18px;
     margin-left: 20px;
     font-weight: bold;
@@ -37,6 +37,10 @@
     color: rgb(206,206,206);
     font-family: 'Poppins', sans-serif;
     text-align: center;
+}
+.second3{
+    color: rgb(206,206,206);
+    margin: 10px;
 }
 
 .second h4 {
