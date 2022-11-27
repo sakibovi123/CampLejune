@@ -32,7 +32,7 @@ const Blog = () => {
 
                                     <div className='content'>
                                         <h2>FREE EXPERT ADVICE</h2>
-                                        <p>Our attorneys offer a free initial chat to discuss your illmesses and eligibility. They can then assess how much compensation you should be owed, taking into account medical bills etc.</p>
+                                        <p>Camp.lejeune water contamination attorney offer a free initial chat to discuss your illmesses and eligibility. They can assess how much compensation you should be owed, taking into account medical bills etc.</p>
                                     </div>
                                 </div>
                             </div>
@@ -44,7 +44,8 @@ const Blog = () => {
 
                                     <div className='content'>
                                         <h2>MAXIMUM COMPENSATION</h2>
-                                        <p>We believe everyone that has been affected is due the maximum compensation for their suffering. With all the information and your authority we ensure we get you the maximum settlement you deserve.</p>
+                                        <p>We believe that
+                                        affected is due the maximum compensation for their suffering.Contaminated water at camp lejeune lawsuit we ensure we get you the maximum settlement you deserve.</p>
                                     </div>
                                 </div>
                             </div>

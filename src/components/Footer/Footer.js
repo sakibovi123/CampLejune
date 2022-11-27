@@ -9,7 +9,7 @@ const Footer = () => {
             <div class="container">
             <div><img src={logo} alt="" /></div>
                 <div className='footer-text'>
-                    <p className=''>While we may provide you preliminary information as to whether you may qualify for compensation, the U.S. District Court: Eastern District of North Carolina ultimately determines who qualifies and what claims are paid. This site is provided for informational purposes only. If you have questions about whether you qualify, please contact an attorney.</p>
+                    <p className=''>While we may provide you preliminary information as to whether you may qualify for compensation, the U.S. District Court: Eastern District of North Carolina ultimately determines who qualifies and what claims are paid. va compensation for camp lejeune water contamination is provided for informational purposes only. If you have questions about whether you qualify, please contact an attorney.</p>
                 </div>
                 <div class="second1">
                 <a href="/"> About Us</a>

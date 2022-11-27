@@ -8,7 +8,7 @@ const Testimonial = () => {
                 <div className="gpt3__cta">
                     <div className="gpt3__cta-content">
 
-                        <h3>"OUR MISSION IS TO PROVIDE HIGH QUALITY ADVICE AND REPRESENTATION BY MAINTAINING THE EXCELLENT STANDARD OF SERVICE THAT OUR NATIONAL HEROES DESERVE."</h3>
+                        <h3>"CAMP LEJEUNE LAWSUIT ELIGIBILITY IS TO PROVIDE HIGH QUALITY ADVICE AND REPRESENTATION BY MAINTAINING THE EXCELLENT STANDARD OF SERVICE THAT OUR NATIONAL HEROES DESERVE."</h3>
                         
                         <div className="gpt3__cta-btn">
                         <a href="tel:+18559390621">

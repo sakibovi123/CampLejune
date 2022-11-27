@@ -55,7 +55,7 @@ const Banner = () => {
     <div>
       
       <div className='banner banner-text' id='home'>
-        <Container className=''>
+        <Container className='banner-box'>
           <Row className='align-items-center'>
             <Col xs={12} md={6} xl={7}>
               <div className='article'>
