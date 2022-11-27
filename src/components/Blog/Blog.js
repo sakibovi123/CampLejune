@@ -5,6 +5,15 @@ import img3 from '../../assets/img3.jpg';
 import './blog.css';
 
 const Blog = () => {
+    function pushData(){
+        window.dataLayer = window.dataLayer || [];
+        var call = document.getElementById("call")
+
+        window.dataLayer.push({
+            event: "call_button"
+        })
+        console.log("clicked")
+    }
     return (
         <div className='blog'>
             <div>
@@ -53,7 +62,7 @@ const Blog = () => {
                     </div>
                    
                 </div>
-                <div className='get-buton'><button>GET FREE QUOTE</button></div>
+                <div className='get-buton'><button onClick={pushData}>GET FREE QUOTE</button></div>
 
             </div>
         </div>

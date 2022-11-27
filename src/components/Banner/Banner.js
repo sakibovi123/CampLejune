@@ -28,13 +28,23 @@ const Banner = () => {
         "representation": e.target.representation.value,
         "lp_action": "test"
       })
-    })
+    }).then(res => console.log(res))
 
-    let responseToZapier = await fetch("", {
+    // const formData = new FormData()
+    // formData.append("lp_campaign_id", "10056")
+    // formData.append("lp_supplier_id", "21039")
+    // formData.append("lp_key", "xzmjar7ns7ppq")
+    // formData.append("first_name", e.target.first_name.value)
+    // formData.append("last_name", e.target.last_name.value)
+    // formData.append("phone", e.target.phone.value)
+    // formData.append("email", e.target.email.value)
+    // formData.append("camp_lj", e.target.camp_lj.value)
+    // formData.append("comment", e.target.comment.value)
+    // formData.append("representation", e.target.representation.value)
+    // formData.append("lp_action", "test")
+
+    let responseToZapier = await fetch("https://hooks.zapier.com/hooks/catch/13844305/bnoi84k/", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
       body: JSON.stringify({
         "lp_campaign_id": "10056",
         "lp_supplier_id": "21039",
@@ -48,19 +58,36 @@ const Banner = () => {
         "representation": e.target.representation.value,
         "lp_action": "test"
       })
-    })
-
-    let data1 = responseLeadprosper.json()
-    let data2 = responseToZapier.json()
-    console.log(responseLeadprosper, data1)
-    console.log(data2, responseToZapier)
+    }).catch(e => console.log(e))
+    let data1 = await responseToZapier.json()
+    console.log(responseToZapier)
 
     navigate("/")
 
   }
 
+  function pushData(){
+    window.dataLayer = window.dataLayer || [];
+    var call = document.getElementById("call")
+
+    window.dataLayer.push({
+      event: "call_button"
+    })
+    console.log("clicked")
+  }
+
+  function pushReview(){
+    window.dataLayer = window.dataLayer || [];
+    var call = document.getElementById("call")
+
+    window.dataLayer.push({
+      event: "review_clicked"
+    })
+    console.log("clicked")
+  }
 
   return (
+
     <div>
     <CallSec />
     <div className='banner banner-text' id='home'>
@@ -71,10 +98,10 @@ const Banner = () => {
               <h1>WERE YOU OR A LOVED ONE BASED AT CAMP LEJEUNE BETWEEN 1953 TO 1987?</h1>
               <h4>You could be owed $1,000s in compensation.<br /> ACT NOW LIMITED TIME TO FILE!</h4>
               <div className='banner-button'>
-              <a href="tel:+18559390621">
-                <button  className='phone-button'><i class="fa-solid fa-phone" /> (855) 939-0621</button>
+              <a href="tel:+18559390621" onClick={pushData} id="call">
+                <button  className='phone-button' onClick={pushData}><i class="fa-solid fa-phone" /> (855) 939-0621</button>
                 </a>
-                <button className='get-button'>GET MY FREE CLAIM REVIEW</button>
+                <button className='get-button' onClick={pushReview}>GET MY FREE CLAIM REVIEW</button>
               </div>
             </div>
 
