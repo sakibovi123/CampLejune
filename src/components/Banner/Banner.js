@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import CallSec from '../subHeader/CallSec';
 import './banner.css';
+import { useNavigate } from "react-router-dom";
 
 
 const Banner = () => {
-
+  const navigate = useNavigate()
   let sendDataToLeadProsper = async (e) => {
+
     e.preventDefault()
     let responseLeadprosper = await fetch("https://api.leadprosper.io/ingest", {
       method: "POST",
@@ -52,6 +54,8 @@ const Banner = () => {
     let data2 = responseToZapier.json()
     console.log(responseLeadprosper, data1)
     console.log(data2, responseToZapier)
+
+    navigate("/")
 
   }
 
