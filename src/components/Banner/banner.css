@@ -1,5 +1,5 @@
 .banner {
-    background-image: url(../../assets/banner.jpeg);
+    background-image: url(../../assets/banner.jpg);
     background-position: center;
     background-size: cover;
     height: 100%;
@@ -55,7 +55,58 @@ button{
     color: #fff;
     margin-right: 25px;
     margin-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
+.phone-button i{
+    animation-name: trin;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes trin {
+
+    from {
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+  
+    20%,
+    32%,
+    44%,
+    56%,
+    68% {
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+  
+    23%,
+    35%,
+    47%,
+    59%,
+    71% {
+      transform: rotate3d(0, 0, 1, 15deg);
+    }
+  
+    26%,
+    38%,
+    50%,
+    62%,
+    74% {
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+  
+    29%,
+    41%,
+    53%,
+    65%,
+    77% {
+      transform: rotate3d(0, 0, 1, -15deg);
+    }
+  
+    80% {
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+  
+  }
 .get-button{
     background-color: #fff;
     color: #FD5D14;

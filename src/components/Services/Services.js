@@ -1,8 +1,9 @@
 import React from 'react';
 import './services.css';
-import service1 from '../../assets/image 12.png';
-import service2 from '../../assets/image 13.png';
-import service3 from '../../assets/image 14.png';
+import service1 from '../../assets/box-1.png';
+import service2 from '../../assets/box-2.png';
+import service3 from '../../assets/box-3.png';
+import service4 from '../../assets/box-4.png';
 
 const Services = () => {
     return (
@@ -33,7 +34,7 @@ const Services = () => {
                     </div>
                 </div>
                 <div class="card">
-                    <img src={service2} class="rounded mx-auto d-block" alt="..." />
+                    <img src={service4} class="rounded mx-auto d-block" alt="..." />
                     <div class="card-body">
                         <h5 class="card-title">JUSTICE SERVED</h5>
                         <p class="card-text">Negotiating on your behalf to make sure you’re properly compensated, we do the hard work to make it a success.</p>

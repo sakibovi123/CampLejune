@@ -4,6 +4,11 @@
     background-color: rgb(250, 249, 249);
     text-align: center;
 }
+.blog-box{
+    text-align: center;
+    justify-content: center;
+    margin-left: 70px;
+}
 
 .blog h1 {
     padding: 20px;
@@ -11,8 +16,10 @@
 }
 
 .get-buton button {
-    background-color: rgb(54, 33, 173);
+    background-color: #FD5D14;
     color: #fff;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .card-blog {
@@ -24,7 +31,8 @@
     transition: 0.3s;
     padding: 30px 15px;
     background: #fff;
-    margin-left: 25px;
+    /* margin-left: 25px; */
+   
 }
 
 .imgbox {

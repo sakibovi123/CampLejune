@@ -8,7 +8,7 @@ const About = () => {
             <div className='container'>
                 <div className='row'>
                     <div className='col-md-6'>
-                        <img width={580} height={500} src={about} alt="" />
+                        <img width={580} height={500} src={about} alt="" className='about-img' />
                     </div>
 
                     <div className='col-md-6'>
@@ -18,9 +18,11 @@ const About = () => {
                             <div className='card-mute'>
                                 <p class="card-text"><small class="text-muted">The U.S. Department of Veteran Affairs (VA) tried to avoid helping US Marines and their families, but a new bipartisan bill allows our heroes to get the help they deserve. Our specialist lawyers can help you and your family get the maximum compensation you deserve.</small></p>
                             </div>
-<div className='get-buton'>
-    <button><i class="fa-solid fa-phone" /> (855) 939-0621</button>
-</div>
+                            <div className='get-buton'>
+                            <a href="tel:+18559390621">
+                                <button><i class="fa-solid fa-phone" /> (855) 939-0621</button>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
