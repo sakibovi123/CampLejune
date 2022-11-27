@@ -70,3 +70,13 @@
     font-size: 28px;
     font-weight: 700;
 }
+
+@media (max-width: 780px) {
+    .subheader{
+        font-size: 16px;
+    }
+    .subheader a span{
+        font-size: 20px;
+    
+    }
+}

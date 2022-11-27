@@ -19,3 +19,9 @@ font-weight: 700;
     color: #FD5D14;
     font-weight: 600;
 }
+@media (max-width: 780px){
+    .privacy{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}

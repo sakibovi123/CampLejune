@@ -45,7 +45,6 @@
 
 .imgbox img {
     width: 100%;
-
 }
 
 .content {
@@ -68,13 +67,18 @@
 .blog-box {
     margin-top: 140px;
     margin-bottom: 50px;
+    margin-left: 0;
+    
 }
 
 @media screen and (max-width: 780px) {
     .card-blog{
-        margin: 80px;
+        margin-bottom: 150px;
     }
     .blog-box{
         text-align: center;
+    }
+    .get-buton{
+        margin-top: -90px;
     }
 }

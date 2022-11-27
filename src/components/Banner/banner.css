@@ -15,42 +15,48 @@
 .banner-form label input {
     margin-left: 10px;
 }
-.banner-form label select{
+
+.banner-form label select {
     margin-left: 10px;
 }
-.article{
-   margin-top: 100px;
-   margin-bottom: 100px;
+
+.article {
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
-.article h1{
+
+.article h1 {
     font-size: 40px;
     font-weight: 700;
     color: white;
     text-align: center;
     justify-content: center;
-    margin: 0 !important; 
+    margin: 0 !important;
 }
-.article h4{
+
+.article h4 {
     color: #fff;
     text-align: center;
     justify-content: center;
     font-size: 18px;
     margin-top: 20px;
 }
-.banner-button{
+
+.banner-button {
     margin: 30px;
     font-size: 15px;
     text-align: center;
     justify-content: center;
-    
+
 }
 
-button{
+button {
     padding: 10px;
     border: #fff;
-    
+
 }
-.phone-button{
+
+.phone-button {
     background-color: #FD5D14;
     color: #fff;
     margin-right: 25px;
@@ -58,66 +64,70 @@ button{
     padding-left: 30px;
     padding-right: 30px;
 }
-.phone-button i{
+
+.phone-button i {
     animation-name: trin;
-  animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
+
 @keyframes trin {
 
     from {
-      transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 0deg);
     }
-  
+
     20%,
     32%,
     44%,
     56%,
     68% {
-      transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 0deg);
     }
-  
+
     23%,
     35%,
     47%,
     59%,
     71% {
-      transform: rotate3d(0, 0, 1, 15deg);
+        transform: rotate3d(0, 0, 1, 15deg);
     }
-  
+
     26%,
     38%,
     50%,
     62%,
     74% {
-      transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 0deg);
     }
-  
+
     29%,
     41%,
     53%,
     65%,
     77% {
-      transform: rotate3d(0, 0, 1, -15deg);
+        transform: rotate3d(0, 0, 1, -15deg);
     }
-  
+
     80% {
-      transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 0deg);
     }
-  
-  }
-.get-button{
+
+}
+
+.get-button {
     background-color: #fff;
     color: #FD5D14;
 }
-.get-button:hover{
+
+.get-button:hover {
     background-color: #FD5D14;
     color: #fff;
 }
 
 /* form style */
-.banner-form{
+.banner-form {
     width: 350px;
     border-radius: 10px;
     text-align: center;
@@ -125,10 +135,11 @@ button{
     color: #fff;
     font-weight: 600;
     margin-left: 80px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     border: 10px inset #fff;
 }
-.form-submit{
+
+.form-submit {
     background-color: #FD5D14;
     color: #fff;
     font-weight: 700;
@@ -136,24 +147,30 @@ button{
     margin-top: 8px;
 }
 
-.radio input{
+.radio input {
     margin-left: 10px;
 }
 
 @media screen and (max-width: 780px) {
-    .article h1{
+    .article h1 {
         font-size: 30px;
         color: white;
         text-align: center;
         justify-content: center;
-        padding-left: 0;
-        padding-right: 0;
+
     }
-    .banner-button{
+
+    .banner-button {
         margin: 0;
         font-size: 10px;
     }
-    .article h4{
+
+    .article h4 {
         font-size: 15px;
+    }
+
+    .banner-form {
+        margin-left: 0;
+        margin-bottom: 40px;
     }
 }
