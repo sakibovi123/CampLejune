@@ -7,6 +7,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Privacy from './pages/Privacy/Privacy';
 import Terms from './pages/Terms/Terms';
+import Thanks from './pages/Thanks/Thanks';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/privacy-policy' element={<Privacy />}></Route>
         <Route path='/terms-condition' element={<Terms />}></Route>
+        <Route path='/thanks' element={<Thanks />}></Route>
       </Routes>
       <Footer />
     </>

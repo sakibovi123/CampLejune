@@ -22,7 +22,7 @@ const Privacy = () => {
         <h2>HOW LONG WE RETAIN YOUR DATA</h2>
         <p><span className='weare'>Suggested text:</span> If you leave a comment, the comment and its metadata are retained indefinitely. This is so we can recognize and approve any follow-up comments automatically instead of holding them in a moderation queue. <br /> For users that register on our website (if any), we also store the personal information they provide in their user profile. All users can see, edit, or delete their personal information at any time (except they cannot change their username). Website administrators can also see and edit that information.</p>
         <h2>WHAT RIGHTS YOU HAVE OVER YOUR DATA</h2>
-        <p><span className='weare'>Suggested text:</span> If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes.</p>
+        <p><span className='weare'>Suggested text:</span> If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. Lawsuit against camp lejeune also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes.</p>
         <h2>WHERE YOUR DATA IS SENT</h2>
         <p><span className='weare'>Suggested text:</span> Visitor comments may be checked through an automated spam detection service.</p>
       </div>

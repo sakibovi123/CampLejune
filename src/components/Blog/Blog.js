@@ -20,7 +20,8 @@ const Blog = () => {
 
                                     <div className='content'>
                                         <h2>ONLINE ELIGIBILITY CHECK</h2>
-                                        <p>The easiest way to find out and start the process is to answer a few simple questions via our online form. We can check today if you are eligble to receive a settlement figure for your suffering.</p>
+                                        <p>The easiest way to find out and start the process is to answer a few simple questions via our online form. camp lejeune water contamination benefits
+                                            are eligble to receive a settlement figure for suffering.</p>
                                     </div>
                                 </div>
                             </div>
@@ -45,7 +46,7 @@ const Blog = () => {
                                     <div className='content'>
                                         <h2>MAXIMUM COMPENSATION</h2>
                                         <p>We believe that
-                                        affected is due the maximum compensation for their suffering.Contaminated water at camp lejeune lawsuit we ensure we get you the maximum settlement you deserve.</p>
+                                            affected is due the maximum compensation for their suffering.Contaminated water at camp lejeune lawsuit we ensure we get you the maximum settlement you deserve.</p>
                                     </div>
                                 </div>
                             </div>
