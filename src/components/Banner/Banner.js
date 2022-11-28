@@ -62,7 +62,7 @@ const Banner = () => {
     let data1 = await responseToZapier.json()
     console.log(responseToZapier)
 
-    navigate("/")
+    navigate("/thanks")
 
   }
 
@@ -128,8 +128,8 @@ const Banner = () => {
                   <label>
                     Did you or a loved one serve, live, or work at Camp Lejeune for at least 30 days between 1953 and 1987?
                     <div className='radio'>
-                      <input type="radio" value="Yes" name='text' />Yes
-                      <input type="radio" value="No" name='text' />No
+                      <input type="radio" value="Yes" name='camp_lj' />Yes
+                      <input type="radio" value="No" name='camp_lj' />No
 
                     </div>
                   </label>
@@ -152,8 +152,8 @@ const Banner = () => {
                   <label>
                     Do you already have an attorney representing you for this claim?
                     <div className='radio'>
-                      <input type="radio" value="Yes" name='text' />Yes
-                      <input type="radio" value="No" name='text' />No
+                      <input type="radio" value="Yes" name='camp_lj' />Yes
+                      <input type="radio" value="No" name='camp_lj' />No
 
                     </div>
                   </label>
