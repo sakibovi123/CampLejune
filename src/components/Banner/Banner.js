@@ -116,7 +116,7 @@ const Banner = () => {
                   <label>
                     Did you or a loved one serve, live, or work at Camp Lejeune for at least 30 days between 1953 and 1987?
                     <br />
-                    <select  name="camp_lj" id="form-control">
+                    <select  name="camp_lj" id="form-control" required>
                       <option value="" selected className="form-control ">Please Select...</option>
                       <option value="Yes">Yes</option>
                       <option value="No">No</option>
@@ -125,23 +125,23 @@ const Banner = () => {
                   <br />
                  
                   <label htmlFor="first_name">First Name</label><br />
-                  <input className="form-control" type="text" name="first_name" placeholder="Enter First Name..." />
+                  <input className="form-control" type="text" name="first_name" placeholder="Enter First Name..." required/>
 
                   <label htmlFor="first_name">Last Name</label><br />
-                  <input className="form-control" type="text" name="last_name" placeholder="Enter Last Name..." />
+                  <input className="form-control" type="text" name="last_name" placeholder="Enter Last Name..." required/>
 
                   <label htmlFor="phone">Phone</label><br />
-                  <input className="form-control" type="text" name="phone" placeholder="Enter Phone..." />
+                  <input className="form-control" type="text" name="phone" placeholder="Enter Phone..." required/>
 
                   <label htmlFor="email">Email</label><br />
-                  <input className="form-control" type="email" name="email" placeholder="Enter Email..." /><br />
+                  <input className="form-control" type="email" name="email" placeholder="Enter Email..." required/><br />
 
                   
 
                   <label>
                     Do you already have an attorney representing you for this claim?
                     <div className='radio'>
-                      <select name="representation" id="" className="form-control">
+                      <select name="representation" id="" className="form-control" required>
                         <option value="" selected>Do you already have an attorney?</option>
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
@@ -153,7 +153,7 @@ const Banner = () => {
                   <br />
                   <label>
                     What injury were you or your loved one diagnosed with?
-                    <select className="form-control" name="injury_type_list">
+                    <select className="form-control" name="injury_type_list" required>
                       <option value="Aplastic anemia">Aplastic anemia</option>
                       <option value="Appendix cancer">Appendix cancer</option>
                       <option value="Amyotrophic lateral">Amyotrophic lateral</option>
@@ -205,7 +205,7 @@ const Banner = () => {
                   <br />
                   <br />
                   <label>Briefly describe what happened</label>
-                  <textarea  className="form-control" name="comment" id="" cols="30" rows="1"></textarea>
+                  <textarea  className="form-control" name="comment" id="" cols="30" rows="1" required></textarea>
 
                   <button className="form-submit ">Submit</button>
 
