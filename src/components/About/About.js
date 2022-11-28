@@ -18,7 +18,7 @@ const About = () => {
                             <div className='card-mute'>
                                 <p class="card-text"><small class="text-muted">The U.S. Department of Veteran Affairs (VA) tried to avoid helping US Marines and their families, but a new bipartisan bill allows our heroes to get the help they deserve. Our camp lejeune water lawyers can help you and your family get the maximum compensation you deserve.</small></p>
                             </div>
-                            <div className='get-buton'>
+                            <div className='get-buttn'>
                             <a href="tel:+18559390621">
                                 <button><i class="fa-solid fa-phone" /> (855) 939-0621</button>
                                 </a>

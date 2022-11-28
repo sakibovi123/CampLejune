@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import CallSec from '../subHeader/CallSec';
 import './banner.css';
 import { useNavigate } from "react-router-dom";
 
@@ -26,7 +25,8 @@ const Banner = () => {
         "camp_lj": e.target.camp_lj.value,
         "representation": e.target.representation.value,
         "injury_type_list": e.target.injury_type_list.value,
-        "lp_action": "test"
+        "lp_action": "test",
+        "comment": e.target.comment.value
       })
     }).then(response => response.json())
         .then(data => console.log(data))
@@ -45,7 +45,8 @@ const Banner = () => {
         "camp_lj": e.target.camp_lj.value,
         "representation": e.target.representation.value,
         "injury_type_list": e.target.injury_type_list.value,
-        "lp_action": "test"
+        "lp_action": "test",
+        "comment": e.target.comment.value
       })
     }).then(response2 => response2.json())
         .then(data2 => console.log(data2))
@@ -79,15 +80,13 @@ const Banner = () => {
 
     <div>
 
-
-
       <div className='banner banner-text' id='home'>
         <div className='banner-box'>
           <Row className='align-items-center'>
             <Col xs={12} md={6} xl={7}>
               <div className='article'>
                 <h1>$7 billion Compensation for Camp Lejeune Toxic Water Victims and their Loved Ones! </h1>
-                <h2><span className='apply'>Apply Now</span>   & Get Instant Eligibility Check.</h2>
+                <h2><a href="/#left-form" className='apply'>Apply Now</a>   & Get Instant Eligibility Check.</h2>
                 <h5><i class="fa-regular fa-circle-check"></i>	Get Your Medical Bills
                   Paid.
                 </h5>
@@ -100,7 +99,10 @@ const Banner = () => {
                   <a href="tel:+18559390621" onClick={pushData}>
                     <button className='phone-button'><i class="fa-solid fa-phone" /> (855) 939-0621</button>
                   </a>
+                  <a href="/#left-form">
                   <button className='get-button' onClick={pushData}>GET MY FREE CLAIM REVIEW</button>
+                  </a>
+                  
                 </div>
               </div>
 
@@ -110,9 +112,10 @@ const Banner = () => {
 
             <Col xs={12} md={6} xl={5}>
               <div className='banner-form form-group'>
-                <form onSubmit={sendDataToLeadProsper}>
+                <form id='left-form' onSubmit={sendDataToLeadProsper}>
                   <label>
                     Did you or a loved one serve, live, or work at Camp Lejeune for at least 30 days between 1953 and 1987?
+                    <br />
                     <select name="camp_lj" id="">
                       <option value="" selected className="form-control">Please Select...</option>
                       <option value="Yes">Yes</option>
@@ -199,6 +202,10 @@ const Banner = () => {
                       <option value="Other Inury">Other Inury</option>
                     </select>
                   </label>
+                  <br />
+                  <br />
+                  <label>Briefly describe what happened</label>
+                  <textarea  className="form-control" name="comment" id="" cols="30" rows="1"></textarea>
 
                   <button className="form-submit ">Submit</button>
 

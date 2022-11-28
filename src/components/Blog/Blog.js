@@ -64,7 +64,8 @@ const Blog = () => {
                     </div>
 
                 </div>
-                <div className='get-buton'><button onClick={pushData}>GET FREE QUOTE</button></div>
+                
+                <div className='get-buton'><a href="/#left-form"><button onClick={pushData}>GET FREE QUOTE</button></a></div>
 
             </div>
         </div>
