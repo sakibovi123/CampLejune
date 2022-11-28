@@ -90,7 +90,7 @@ const Banner = () => {
 
     <div>
 
-      
+
 
       <div className='banner banner-text' id='home'>
         <div className='banner-box'>
@@ -98,9 +98,9 @@ const Banner = () => {
             <Col xs={12} md={6} xl={7}>
               <div className='article'>
                 <h1>$7 billion Compensation for Camp Lejeune Toxic Water Victims and their Loved Ones! </h1>
-<h2><span className='apply'>Apply Now</span>   & Get Instant Eligibility Check.</h2>
-                <h5><i class="fa-regular fa-circle-check"></i>	Get Your Medical Bills 
-                   Paid.
+                <h2><span className='apply'>Apply Now</span>   & Get Instant Eligibility Check.</h2>
+                <h5><i class="fa-regular fa-circle-check"></i>	Get Your Medical Bills
+                  Paid.
                 </h5>
                 <h5><i class="fa-sharp fa-solid fa-scroll"></i>	Complete the no-cost claim review form.
                 </h5>
@@ -123,11 +123,7 @@ const Banner = () => {
               <div className='banner-form form-group'>
                 <form onSubmit={sendDataToLeadProsper}>
 
-                  {/* <label htmlFor="">Did you or a loved one serve, live, or work at Camp Lejeune for at least 30 days between 1953 and 1987?</label><br />
-                                    <select name="camp_lj" id="" className="form-control">
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select><br /> */}
+                  
 
                   <label>
                     Did you or a loved one serve, live, or work at Camp Lejeune for at least 30 days between 1953 and 1987?
@@ -151,11 +147,7 @@ const Banner = () => {
                   <label htmlFor="email">Email</label><br />
                   <input className="form-control" type="email" name="email" placeholder="Enter Email..." /><br />
 
-                  {/* <label htmlFor="representation">Do you already have an attorney representing you for this claim?</label><br />
-                                    <select name="representation" className="form-control">
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select><br /> */}
+                  
 
                   <label>
                     Do you already have an attorney representing you for this claim?

@@ -97,13 +97,8 @@ const GetInTouch = () => {
                                     </h5>
                                     <p>Camp lejeune lawyers guide you through the enrollment process step by step. Securing your coverage online or over the phone.</p>
                                 </div>
-                                {/* <h4>You could be owed $1,000s in compensation.<br /> ACT NOW LIMITED TIME TO FILE!</h4> */}
-                                {/* <div className='banner-button'>
-                  <a href="tel:+18559390621">
-                    <button className='phone-button'><i class="fa-solid fa-phone" /> (855) 939-0621</button>
-                  </a>
-                  <button className='get-button'>GET MY FREE CLAIM REVIEW</button>
-                </div> */}
+                               
+                                
                             </div>
 
                         </Col>
@@ -114,12 +109,7 @@ const GetInTouch = () => {
                             <div className='banner-form form-group'>
                                 <form onSubmit={sendDataToLeadProsper}>
 
-                                    {/* <label htmlFor="">Did you or a loved one serve, live, or work at Camp Lejeune for at least 30 days between 1953 and 1987?</label><br />
-                                    <select name="camp_lj" id="" className="form-control">
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select><br /> */}
-
+                                    
                                     <label>
                                         Did you or a loved one serve, live, or work at Camp Lejeune for at least 30 days between 1953 and 1987?
                                         <div className='radio'>
@@ -142,11 +132,7 @@ const GetInTouch = () => {
                                     <label htmlFor="email">Email</label><br />
                                     <input className="form-control" type="email" name="email" placeholder="Enter Email..." /><br />
 
-                                    {/* <label htmlFor="representation">Do you already have an attorney representing you for this claim?</label><br />
-                                    <select name="representation" className="form-control">
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select><br /> */}
+                                    
 
                                     <label>
                                         Do you already have an attorney representing you for this claim?
