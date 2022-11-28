@@ -13,7 +13,7 @@ const Services = () => {
                     <img src={service1} class="rounded mx-auto d-block" alt="..." />
                     <div class="card-body">
                         <h5 class="card-title">FREE INITIAL ASSESSMENT</h5>
-                        <p class="card-text">We will provide you the best advice and action to get the most compensation.</p>
+                        <p class="card-text">Justice ACT 2022  provide you the best advice and action to get the most compensation.</p>
                         
                     </div>
                 </div>
@@ -29,7 +29,7 @@ const Services = () => {
                     <img src={service3} class="rounded mx-auto d-block" alt="..." />
                     <div class="card-body">
                         <h5 class="card-title">MAXIMUM SETTLEMENT</h5>
-                        <p class="card-text">We aim to make sure you are compensated for the most money your are eligible for.</p>
+                        <p class="card-text">Camp lejeune attorneys make sure you are compensated for the most money your are eligible for.</p>
                         
                     </div>
                 </div>

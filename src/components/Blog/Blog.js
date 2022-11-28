@@ -5,7 +5,7 @@ import img3 from '../../assets/img3.jpg';
 import './blog.css';
 
 const Blog = () => {
-    function pushData(){
+    function pushData() {
         window.dataLayer = window.dataLayer || [];
         var call = document.getElementById("call")
 
@@ -29,11 +29,12 @@ const Blog = () => {
 
                                     <div className='content'>
                                         <h2>ONLINE ELIGIBILITY CHECK</h2>
-                                        <p>The easiest way to find out and start the process is to answer a few simple questions via our online form. We can check today if you are eligble to receive a settlement figure for your suffering.</p>
+                                        <p>The easiest way to find out and start the process is to answer a few simple questions via our online form. camp lejeune water contamination benefits
+                                            are eligble to receive a settlement figure for suffering.</p>
                                     </div>
                                 </div>
-                                </div>
-                                <div className='col-md-4'>
+                            </div>
+                            <div className='col-md-4'>
                                 <div className='card-blog'>
                                     <div className='imgbox'>
                                         <img src={img2} alt="" />
@@ -41,11 +42,11 @@ const Blog = () => {
 
                                     <div className='content'>
                                         <h2>FREE EXPERT ADVICE</h2>
-                                        <p>Our attorneys offer a free initial chat to discuss your illmesses and eligibility. They can then assess how much compensation you should be owed, taking into account medical bills etc.</p>
+                                        <p>Camp.lejeune water contamination attorney offer a free initial chat to discuss your illmesses and eligibility. They can assess how much compensation you should be owed, taking into account medical bills etc.</p>
                                     </div>
                                 </div>
-                                </div>
-                                <div className='col-md-4'>
+                            </div>
+                            <div className='col-md-4'>
                                 <div className='card-blog'>
                                     <div className='imgbox'>
                                         <img src={img3} alt="" />
@@ -53,14 +54,15 @@ const Blog = () => {
 
                                     <div className='content'>
                                         <h2>MAXIMUM COMPENSATION</h2>
-                                        <p>We believe everyone that has been affected is due the maximum compensation for their suffering. With all the information and your authority we ensure we get you the maximum settlement you deserve.</p>
+                                        <p>We believe that
+                                            affected is due the maximum compensation for their suffering.Contaminated water at camp lejeune lawsuit we ensure we get you the maximum settlement you deserve.</p>
                                     </div>
                                 </div>
-                                </div>
-                            
+                            </div>
+
                         </div>
                     </div>
-                   
+
                 </div>
                 <div className='get-buton'><button onClick={pushData}>GET FREE QUOTE</button></div>
 
@@ -69,4 +71,4 @@ const Blog = () => {
     )
 }
 
-export default Blog
+export default Blog;

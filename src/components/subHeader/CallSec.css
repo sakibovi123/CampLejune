@@ -1,72 +1,82 @@
 .subheader{
-    background-color: #FD5D14;
-    color: #fff;
-    padding: 5px;
-    text-align: center;
-    font-size: 20px;
+  background-color: #FD5D14;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+  font-size: 20px;
 }
 .subheader a{
-    text-decoration: none;
-    color: #fff;
-    padding-left: 10px;
-    
+  text-decoration: none;
+  color: #fff;
+  padding-left: 10px;
+  
 }
 .subheader a i {
-    padding-right: 10px;
-    animation-name: trin;
-  animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  padding-right: 10px;
+  animation-name: trin;
+animation-duration: 1.5s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
 }
 @keyframes trin {
 
-    from {
-      transform: rotate3d(0, 0, 1, 0deg);
-    }
-  
-    20%,
-    32%,
-    44%,
-    56%,
-    68% {
-      transform: rotate3d(0, 0, 1, 0deg);
-    }
-  
-    23%,
-    35%,
-    47%,
-    59%,
-    71% {
-      transform: rotate3d(0, 0, 1, 15deg);
-    }
-  
-    26%,
-    38%,
-    50%,
-    62%,
-    74% {
-      transform: rotate3d(0, 0, 1, 0deg);
-    }
-  
-    29%,
-    41%,
-    53%,
-    65%,
-    77% {
-      transform: rotate3d(0, 0, 1, -15deg);
-    }
-  
-    80% {
-      transform: rotate3d(0, 0, 1, 0deg);
-    }
-  
+  from {
+    transform: rotate3d(0, 0, 1, 0deg);
   }
+
+  20%,
+  32%,
+  44%,
+  56%,
+  68% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  23%,
+  35%,
+  47%,
+  59%,
+  71% {
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  26%,
+  38%,
+  50%,
+  62%,
+  74% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  29%,
+  41%,
+  53%,
+  65%,
+  77% {
+    transform: rotate3d(0, 0, 1, -15deg);
+  }
+
+  80% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+}
 .subheader a:hover{
-    text-decoration: underline;
-    color: #fff;
+  text-decoration: underline;
+  color: #fff;
 }
 
 .subheader a span{
-    font-size: 28px;
-    font-weight: 700;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+@media (max-width: 780px) {
+  .subheader{
+      font-size: 14px;
+  }
+  .subheader a span{
+      font-size: 18px;
+  
+  }
 }

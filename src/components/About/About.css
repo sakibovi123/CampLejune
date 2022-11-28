@@ -1,72 +1,77 @@
 .about-img{
-   width: 95%;
-   height: 100%;
+  width: 95%;
+  height: 100%;
 }
 .about{
-    margin: 50px;
-    padding-top: 50px;
+   margin: 50px;
+   padding-top: 50px;
 }
 
 .card-body{
-    border: #fff;
+   border: #fff;
 }
 .card-title{
-    margin-bottom: 20px;
+   margin-bottom: 20px;
+   font-weight: 700;
 }
 .card-mute{
-    padding: 40px;
-    background: rgb(245, 244, 244);
-    margin-bottom: 10px;
+   padding: 40px;
+   background: rgb(245, 244, 244);
+   margin-bottom: 10px;
 }
 .get-buton{
-    margin-top: 30px;
+   margin-top: 30px;
 }
 .get-buton button i{
-    animation-name: trin;
-  animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+   animation-name: trin;
+ animation-duration: 1.5s;
+ animation-iteration-count: infinite;
+ animation-timing-function: linear;
 }
 @keyframes trin {
 
-    from {
-      transform: rotate3d(0, 0, 1, 0deg);
-    }
-  
-    20%,
-    32%,
-    44%,
-    56%,
-    68% {
-      transform: rotate3d(0, 0, 1, 0deg);
-    }
-  
-    23%,
-    35%,
-    47%,
-    59%,
-    71% {
-      transform: rotate3d(0, 0, 1, 15deg);
-    }
-  
-    26%,
-    38%,
-    50%,
-    62%,
-    74% {
-      transform: rotate3d(0, 0, 1, 0deg);
-    }
-  
-    29%,
-    41%,
-    53%,
-    65%,
-    77% {
-      transform: rotate3d(0, 0, 1, -15deg);
-    }
-  
-    80% {
-      transform: rotate3d(0, 0, 1, 0deg);
-    }
-  
-  }
+   from {
+     transform: rotate3d(0, 0, 1, 0deg);
+   }
+ 
+   20%,
+   32%,
+   44%,
+   56%,
+   68% {
+     transform: rotate3d(0, 0, 1, 0deg);
+   }
+ 
+   23%,
+   35%,
+   47%,
+   59%,
+   71% {
+     transform: rotate3d(0, 0, 1, 15deg);
+   }
+ 
+   26%,
+   38%,
+   50%,
+   62%,
+   74% {
+     transform: rotate3d(0, 0, 1, 0deg);
+   }
+ 
+   29%,
+   41%,
+   53%,
+   65%,
+   77% {
+     transform: rotate3d(0, 0, 1, -15deg);
+   }
+ 
+   80% {
+     transform: rotate3d(0, 0, 1, 0deg);
+   }
+ 
+ }
+ .card-text{
+   margin-top: 10px;
+   margin-bottom: 20px;
+ }

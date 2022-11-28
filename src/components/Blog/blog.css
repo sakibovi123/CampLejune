@@ -24,7 +24,7 @@
 
 .card-blog {
     position: relative;
-    width: 300px;
+    width: 400px;
     height: 300px;
     border-radius: 10px;
     box-shadow: 0px 5px 20px rgba(203, 200, 200, 0.5);
@@ -45,19 +45,20 @@
 
 .imgbox img {
     width: 100%;
-
 }
 
 .content {
     padding: 10px 20px;
     text-align: center;
-    transform: translateY(-200px);
+    transform: translateY(-150px);
     opacity: 1;
     transition: 0.3s;
+    
 }
 
 .content h2 {
     font-size: 18px;
+    font-weight: 700;
 }
 
 .content p {
@@ -67,13 +68,24 @@
 .blog-box {
     margin-top: 140px;
     margin-bottom: 50px;
+    margin-left: 0;
+    
 }
 
 @media screen and (max-width: 780px) {
     .card-blog{
-        margin: 80px;
+        margin-bottom: 150px;
+        padding-left: 0;
+        width: 300px;
     }
     .blog-box{
         text-align: center;
+        margin-left: 0;
+    }
+    .get-buton{
+        margin-top: -90px;
+    }
+    .content{
+        transform: translateY(-200px);
     }
 }

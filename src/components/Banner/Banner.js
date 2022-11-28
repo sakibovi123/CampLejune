@@ -66,7 +66,7 @@ const Banner = () => {
 
   }
 
-  function pushData(){
+  function pushData() {
     window.dataLayer = window.dataLayer || [];
     var call = document.getElementById("call")
 
@@ -76,7 +76,7 @@ const Banner = () => {
     console.log("clicked")
   }
 
-  function pushReview(){
+  function pushReview() {
     window.dataLayer = window.dataLayer || [];
     var call = document.getElementById("call")
 
@@ -89,71 +89,71 @@ const Banner = () => {
   return (
 
     <div>
-    <CallSec />
-    <div className='banner banner-text' id='home'>
-      <Container className=''>
-        <Row className='align-items-center'>
-          <Col xs={12} md={6} xl={7}>
-            <div className='article'>
-              <h1>WERE YOU OR A LOVED ONE BASED AT CAMP LEJEUNE BETWEEN 1953 TO 1987?</h1>
-              <h4>You could be owed $1,000s in compensation.<br /> ACT NOW LIMITED TIME TO FILE!</h4>
-              <div className='banner-button'>
-              <a href="tel:+18559390621" onClick={pushData} id="call">
-                <button  className='phone-button' onClick={pushData}><i class="fa-solid fa-phone" /> (855) 939-0621</button>
-                </a>
-                <button className='get-button' onClick={pushReview}>GET MY FREE CLAIM REVIEW</button>
+
+      <div className='banner banner-text' id='home'>
+        <div className='banner-box'>
+          <Row className='align-items-center'>
+            <Col xs={12} md={6} xl={7}>
+              <div className='article'>
+                <h1>WERE YOU OR A LOVED ONE BASED AT CAMP LEJEUNE BETWEEN 1953 TO 1987?</h1>
+                <h4>You could be owed $1,000s in compensation.<br /> ACT NOW LIMITED TIME TO FILE!</h4>
+                <div className='banner-button'>
+                  <a href="tel:+18559390621">
+                    <button className='phone-button'><i class="fa-solid fa-phone" /> (855) 939-0621</button>
+                  </a>
+                  <button className='get-button'>GET MY FREE CLAIM REVIEW</button>
+                </div>
               </div>
-            </div>
 
-          </Col>
+            </Col>
 
-          {/* *****************banner form*************** */}
+            {/* *****************banner form*************** */}
 
-          <Col xs={12} md={6} xl={5}>
-          <div className='banner-form form-group'>
-            <form onSubmit={sendDataToLeadProsper}>
-              
-              <label htmlFor="">Did you or a loved one serve, live, or work at Camp Lejeune for at least 30 days between 1953 and 1987?</label><br/>
-              <select name="camp_lj" id="" className="form-control">
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-              </select><br/>
+            <Col xs={12} md={6} xl={5}>
+              <div className='banner-form form-group'>
+                <form onSubmit={sendDataToLeadProsper}>
 
-              <label htmlFor="first_name">First Name</label><br/>
-              <input className="form-control" type="text" name="first_name" placeholder="Enter First Name..."/><br/>
+                  <label htmlFor="">Did you or a loved one serve, live, or work at Camp Lejeune for at least 30 days between 1953 and 1987?</label><br />
+                  <select name="camp_lj" id="" className="form-control">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select><br />
 
-              <label htmlFor="first_name">Last Name</label><br/>
-              <input className="form-control" type="text" name="last_name" placeholder="Enter Last Name..."/><br/>
+                  <label htmlFor="first_name">First Name</label><br />
+                  <input className="form-control" type="text" name="first_name" placeholder="Enter First Name..." /><br />
 
-              <label htmlFor="phone">Phone</label><br/>
-              <input className="form-control" type="text" name="phone" placeholder="Enter Phone..."/><br/>
+                  <label htmlFor="first_name">Last Name</label><br />
+                  <input className="form-control" type="text" name="last_name" placeholder="Enter Last Name..." /><br />
 
-              <label htmlFor="email">Email</label><br/>
-              <input className="form-control" type="email" name="email" placeholder="Enter Email..."/><br/>
+                  <label htmlFor="phone">Phone</label><br />
+                  <input className="form-control" type="text" name="phone" placeholder="Enter Phone..." /><br />
 
-              <label htmlFor="representation">Do you already have an attorney representing you for this claim?</label><br/>
-              <select name="representation" className="form-control">
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-              </select><br/>
+                  <label htmlFor="email">Email</label><br />
+                  <input className="form-control" type="email" name="email" placeholder="Enter Email..." /><br />
 
-              <label htmlFor="representation">Do you already have an attorney representing you for this claim?</label><br/>
-              <select name="representation" className="form-control">
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-              </select><br/>
+                  <label htmlFor="representation">Do you already have an attorney representing you for this claim?</label><br />
+                  <select name="representation" className="form-control">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select><br />
 
-              <label htmlFor="Briefly describe what happened:">Briefly describe what happened:</label><br/>
-              <textarea name="comment" id="" cols="30" rows="10" className="form-control" placeholder="Briefly Describe what happened"></textarea><br/>
+                  <label htmlFor="representation">Do you already have an attorney representing you for this claim?</label><br />
+                  <select name="representation" className="form-control">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select><br />
 
-              <button className="btn btn-outline-primary">Send Request</button>
-  
-            </form>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-</div>
+                  <label htmlFor="Briefly describe what happened:">Briefly describe what happened:</label><br />
+                  <textarea name="comment" id="" cols="30" rows="10" className="form-control" placeholder="Briefly Describe what happened"></textarea><br />
+
+                  <button className="form-submit ">Send Request</button>
+
+                </form>
+              </div>
+            </Col>
+          </Row>
+        </div>
+      </div>
     </div>
   )
 }
