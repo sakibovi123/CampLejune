@@ -79,11 +79,11 @@ const GetInTouch = () => {
                         <Col xs={12} md={6} xl={7}>
                             <div className='camp'>
                                 <h1>Making a “Camp Lejeune Justice Act of 2022” Claim</h1>
-                                
+
 
                                 <div className='get'>
                                     <h5><i class="fa-regular fa-circle-check"></i>	Get Your
-Medical Bills Paid.
+                                        Medical Bills Paid.
                                     </h5>
                                     <p>We treat you like you’re family. Our motto, “Experience you can trust,” is a reflection of our lawyers’ compassion, track record, and relentless need to fight for justice.</p>
                                 </div>
@@ -114,38 +114,102 @@ Medical Bills Paid.
                             <div className='banner-form form-group'>
                                 <form onSubmit={sendDataToLeadProsper}>
 
-                                    <label htmlFor="">Did you or a loved one serve, live, or work at Camp Lejeune for at least 30 days between 1953 and 1987?</label><br />
+                                    {/* <label htmlFor="">Did you or a loved one serve, live, or work at Camp Lejeune for at least 30 days between 1953 and 1987?</label><br />
                                     <select name="camp_lj" id="" className="form-control">
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
-                                    </select><br />
+                                    </select><br /> */}
+
+                                    <label>
+                                        Did you or a loved one serve, live, or work at Camp Lejeune for at least 30 days between 1953 and 1987?
+                                        <div className='radio'>
+                                            <input type="radio" value="Yes" name='text' />Yes
+                                            <input type="radio" value="No" name='text' />No
+
+                                        </div>
+                                    </label>
+                                    <br />
 
                                     <label htmlFor="first_name">First Name</label><br />
-                                    <input className="form-control" type="text" name="first_name" placeholder="Enter First Name..." /><br />
+                                    <input className="form-control" type="text" name="first_name" placeholder="Enter First Name..." />
 
                                     <label htmlFor="first_name">Last Name</label><br />
-                                    <input className="form-control" type="text" name="last_name" placeholder="Enter Last Name..." /><br />
+                                    <input className="form-control" type="text" name="last_name" placeholder="Enter Last Name..." />
 
                                     <label htmlFor="phone">Phone</label><br />
-                                    <input className="form-control" type="text" name="phone" placeholder="Enter Phone..." /><br />
+                                    <input className="form-control" type="text" name="phone" placeholder="Enter Phone..." />
 
                                     <label htmlFor="email">Email</label><br />
                                     <input className="form-control" type="email" name="email" placeholder="Enter Email..." /><br />
 
-                                    <label htmlFor="representation">Do you already have an attorney representing you for this claim?</label><br />
+                                    {/* <label htmlFor="representation">Do you already have an attorney representing you for this claim?</label><br />
                                     <select name="representation" className="form-control">
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
-                                    </select><br />
+                                    </select><br /> */}
 
-                                    <label htmlFor="representation">Do you already have an attorney representing you for this claim?</label><br />
-                                    <select name="representation" className="form-control">
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select><br />
+                                    <label>
+                                        Do you already have an attorney representing you for this claim?
+                                        <div className='radio'>
+                                            <input type="radio" value="Yes" name='text' />Yes
+                                            <input type="radio" value="No" name='text' />No
 
-                                    <label htmlFor="Briefly describe what happened:">Briefly describe what happened:</label><br />
-                                    <textarea name="comment" id="" cols="30" rows="10" className="form-control" placeholder="Briefly Describe what happened"></textarea><br />
+                                        </div>
+                                    </label>
+                                    <br />
+
+                                    <label>
+                                        What injury were you or your loved one diagnosed with?
+                                        <select className="form-control" name="country">
+                                            <option value="us">Aplastic anemia</option>
+                                            <option value="us">Appendix cancer</option>
+                                            <option value="us">Amyotrophic lateral</option>
+                                            <option value="us">sclerosis (ALS)</option>
+                                            <option value="us">Autoimmune disease</option>
+                                            <option value="us">Bile duct cancer</option>
+                                            <option value="us">Birth defects</option>
+                                            <option value="us">Bladder cancer</option>
+                                            <option value="us">Brain cancer</option>
+                                            <option value="us">Breast cancer</option>
+                                            <option value="us">Cervical cancer</option>
+                                            <option value="us">Cirrhosis of the liver</option>
+                                            <option value="us">Conjoined twins</option>
+                                            <option value="us">Colorectal (colon) cancer</option>
+                                            <option value="us">Congenital malformation</option>
+                                            <option value="us">End-stage renal disease</option>
+                                            <option value="us">Esophageal cancer</option>
+                                            <option value="us">Female infertility</option>
+                                            <option value="us">Gallbladder cancer</option>
+                                            <option value="us">Hepatic steatosis (Fatty liver disease)</option>
+                                            <option value="us">Hodgkin's disease</option>
+                                            <option value="us">Intestinal cancer</option>
+                                            <option value="us">Kidney cancer</option>
+                                            <option value="us">Leukemia</option>
+                                            <option value="us">Liver cancer</option>
+                                            <option value="us">Lung cancer</option>
+                                            <option value="us">Miscarriage</option>
+                                            <option value="us">Multiple myeloma</option>
+                                            <option value="us">Multiple Sclerosis (MS)
+                                            </option>
+                                            <option value="us">Multiple myeloma</option>
+                                            <option value="us">Myelodysplastic </option>
+                                            <option value="us">syndromes (MDS)</option>
+                                            <option value="us">Neurobehavioral effects</option>
+                                            <option value="us">No Injury</option>
+                                            <option value="us">Non-Hodgkin's lymphoma (NHL)</option>
+                                            <option value="us">Ovarian cancer</option>
+                                            <option value="us">Other Inury</option>
+                                            <option value="us">Pancreatic cancer</option>
+                                            <option value="us">Parkinson's disease</option>
+                                            <option value="us">Prostate cancer</option>
+                                            <option value="us">Renal toxicity</option>
+                                            <option value="us">Scleroderma</option>
+                                            <option value="us">Sinus cancer</option>
+                                            <option value="us">Thyroid cancer</option>
+                                            <option value="us">No Injury </option>
+                                            <option value="us">Other Inury</option>
+                                        </select>
+                                    </label>
 
                                     <button className="form-submit ">Send Request</button>
 

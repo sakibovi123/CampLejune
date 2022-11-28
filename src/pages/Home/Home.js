@@ -15,7 +15,7 @@ const Home = () => {
       
       <Banner />
       <Services />
-      <GetInTouch />
+      {/* <GetInTouch /> */}
       <About />
       <Journal />
       <Blog />
