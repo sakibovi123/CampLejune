@@ -47,7 +47,7 @@ const GetInTouch = () => {
         let data1 = await responseToZapier.json()
         console.log(responseToZapier)
 
-        navigate("/")
+        navigate("/thanks")
 
     }
 
