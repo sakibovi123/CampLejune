@@ -7,8 +7,8 @@ import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
   const navigate = useNavigate()
-  let sendDataToLeadProsper = async (e) => {
 
+  let sendDataToLeadProsper = async (e) => {
     e.preventDefault()
     let responseLeadprosper = await fetch("https://api.leadprosper.io/ingest", {
       method: "POST",
@@ -24,24 +24,13 @@ const Banner = () => {
         "phone": e.target.phone.value,
         "email": e.target.email.value,
         "camp_lj": e.target.camp_lj.value,
-        "comment": e.target.comment.value,
         "representation": e.target.representation.value,
+        "injury_type_list": e.target.injury_type_list.value,
         "lp_action": "test"
       })
-    }).then(res => console.log(res))
-
-    // const formData = new FormData()
-    // formData.append("lp_campaign_id", "10056")
-    // formData.append("lp_supplier_id", "21039")
-    // formData.append("lp_key", "xzmjar7ns7ppq")
-    // formData.append("first_name", e.target.first_name.value)
-    // formData.append("last_name", e.target.last_name.value)
-    // formData.append("phone", e.target.phone.value)
-    // formData.append("email", e.target.email.value)
-    // formData.append("camp_lj", e.target.camp_lj.value)
-    // formData.append("comment", e.target.comment.value)
-    // formData.append("representation", e.target.representation.value)
-    // formData.append("lp_action", "test")
+    }).then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.log(error))
 
     let responseToZapier = await fetch("https://hooks.zapier.com/hooks/catch/13844305/bnoi84k/", {
       method: "POST",
@@ -54,21 +43,21 @@ const Banner = () => {
         "phone": e.target.phone.value,
         "email": e.target.email.value,
         "camp_lj": e.target.camp_lj.value,
-        "comment": e.target.comment.value,
         "representation": e.target.representation.value,
+        "injury_type_list": e.target.injury_type_list.value,
         "lp_action": "test"
       })
-    }).catch(e => console.log(e))
-    let data1 = await responseToZapier.json()
-    console.log(responseToZapier)
+    }).then(response2 => response2.json())
+        .then(data2 => console.log(data2))
+        .catch(error2 => console.log(error2))
 
-    navigate("/thanks")
+    // navigate("/thanks")
 
   }
 
   function pushData() {
     window.dataLayer = window.dataLayer || [];
-    var call = document.getElementById("call")
+    let call = document.getElementById("call")
 
     window.dataLayer.push({
       event: "call_button"
@@ -78,7 +67,7 @@ const Banner = () => {
 
   function pushReview() {
     window.dataLayer = window.dataLayer || [];
-    var call = document.getElementById("call")
+    let call = document.getElementById("call")
 
     window.dataLayer.push({
       event: "review_clicked"
@@ -108,10 +97,10 @@ const Banner = () => {
                 </h5>
                 <h4><span className='million'>you could be owed $3 million</span> in compensation.<br /> ACT NOW LIMITED TIME TO FILE!</h4>
                 <div className='banner-button'>
-                  <a href="tel:+18559390621">
+                  <a href="tel:+18559390621" onClick={pushData}>
                     <button className='phone-button'><i class="fa-solid fa-phone" /> (855) 939-0621</button>
                   </a>
-                  <button className='get-button'>GET MY FREE CLAIM REVIEW</button>
+                  <button className='get-button' onClick={pushData}>GET MY FREE CLAIM REVIEW</button>
                 </div>
               </div>
 
@@ -122,16 +111,13 @@ const Banner = () => {
             <Col xs={12} md={6} xl={5}>
               <div className='banner-form form-group'>
                 <form onSubmit={sendDataToLeadProsper}>
-
-                  
-
                   <label>
                     Did you or a loved one serve, live, or work at Camp Lejeune for at least 30 days between 1953 and 1987?
-                    <div className='radio'>
-                      <input type="radio" value="Yes" name='camp_lj' />Yes
-                      <input type="radio" value="No" name='camp_lj' />No
-
-                    </div>
+                    <select name="camp_lj" id="">
+                      <option value="" selected className="form-control">Please Select...</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
                   </label>
                   <br />
                   <br />
@@ -152,8 +138,11 @@ const Banner = () => {
                   <label>
                     Do you already have an attorney representing you for this claim?
                     <div className='radio'>
-                      <input type="radio" value="Yes" name='camp_lj' />Yes
-                      <input type="radio" value="No" name='camp_lj' />No
+                      <select name="representation" id="" className="form-control">
+                        <option value="" selected>Do you already have an attorney?</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                      </select>
 
                     </div>
                   </label>
@@ -161,54 +150,53 @@ const Banner = () => {
                   <br />
                   <label>
                     What injury were you or your loved one diagnosed with?
-                    <select className="form-control" name="country">
-                      <option value="us">Aplastic anemia</option>
-                      <option value="us">Appendix cancer</option>
-                      <option value="us">Amyotrophic lateral</option>
-                      <option value="us">sclerosis (ALS)</option>
-                      <option value="us">Autoimmune disease</option>
-                      <option value="us">Bile duct cancer</option>
-                      <option value="us">Birth defects</option>
-                      <option value="us">Bladder cancer</option>
-                      <option value="us">Brain cancer</option>
-                      <option value="us">Breast cancer</option>
-                      <option value="us">Cervical cancer</option>
-                      <option value="us">Cirrhosis of the liver</option>
-                      <option value="us">Conjoined twins</option>
-                      <option value="us">Colorectal (colon) cancer</option>
-                      <option value="us">Congenital malformation</option>
-                      <option value="us">End-stage renal disease</option>
-                      <option value="us">Esophageal cancer</option>
-                      <option value="us">Female infertility</option>
-                      <option value="us">Gallbladder cancer</option>
-                      <option value="us">Hepatic steatosis (Fatty liver disease)</option>
-                      <option value="us">Hodgkin's disease</option>
-                      <option value="us">Intestinal cancer</option>
-                      <option value="us">Kidney cancer</option>
-                      <option value="us">Leukemia</option>
-                      <option value="us">Liver cancer</option>
-                      <option value="us">Lung cancer</option>
-                      <option value="us">Miscarriage</option>
-                      <option value="us">Multiple myeloma</option>
-                      <option value="us">Multiple Sclerosis (MS)
-                      </option>
-                      <option value="us">Multiple myeloma</option>
-                      <option value="us">Myelodysplastic </option>
-                      <option value="us">syndromes (MDS)</option>
-                      <option value="us">Neurobehavioral effects</option>
-                      <option value="us">No Injury</option>
-                      <option value="us">Non-Hodgkin's lymphoma (NHL)</option>
-                      <option value="us">Ovarian cancer</option>
-                      <option value="us">Other Inury</option>
-                      <option value="us">Pancreatic cancer</option>
-                      <option value="us">Parkinson's disease</option>
-                      <option value="us">Prostate cancer</option>
-                      <option value="us">Renal toxicity</option>
-                      <option value="us">Scleroderma</option>
-                      <option value="us">Sinus cancer</option>
-                      <option value="us">Thyroid cancer</option>
-                      <option value="us">No Injury </option>
-                      <option value="us">Other Inury</option>
+                    <select className="form-control" name="injury_type_list">
+                      <option value="Aplastic anemia">Aplastic anemia</option>
+                      <option value="Appendix cancer">Appendix cancer</option>
+                      <option value="Amyotrophic lateral">Amyotrophic lateral</option>
+                      <option value="sclerosis (ALS)">sclerosis (ALS)</option>
+                      <option value="Autoimmune disease">Autoimmune disease</option>
+                      <option value="Bile duct cancer">Bile duct cancer</option>
+                      <option value="Birth defects">Birth defects</option>
+                      <option value="Bladder cancer">Bladder cancer</option>
+                      <option value="Brain cancer">Brain cancer</option>
+                      <option value="Breast cancer">Breast cancer</option>
+                      <option value="Cervical cancer">Cervical cancer</option>
+                      <option value="Cirrhosis of the liver">Cirrhosis of the liver</option>
+                      <option value="Conjoined twins">Conjoined twins</option>
+                      <option value="Colorectal (colon) cancer">Colorectal (colon) cancer</option>
+                      <option value="Congenital malformation">Congenital malformation</option>
+                      <option value="End-stage renal disease">End-stage renal disease</option>
+                      <option value="Esophageal cancer">Esophageal cancer</option>
+                      <option value="Female infertility">Female infertility</option>
+                      <option value="Gallbladder cancer">Gallbladder cancer</option>
+                      <option value="Hepatic steatosis (Fatty liver disease)">Hepatic steatosis (Fatty liver disease)</option>
+                      <option value="Hodgkin's disease">Hodgkin's disease</option>
+                      <option value="Intestinal cancer">Intestinal cancer</option>
+                      <option value="Kidney cancer">Kidney cancer</option>
+                      <option value="Leukemia">Leukemia</option>
+                      <option value="Liver cancer">Liver cancer</option>
+                      <option value="Lung cancer">Lung cancer</option>
+                      <option value="Miscarriage">Miscarriage</option>
+                      <option value="Multiple myeloma">Multiple myeloma</option>
+                      <option value="Multiple Sclerosis (MS)">Multiple Sclerosis (MS)</option>
+                      <option value="Multiple myeloma">Multiple myeloma</option>
+                      <option value="Myelodysplastic">Myelodysplastic</option>
+                      <option value="syndromes (MDS)">syndromes (MDS)</option>
+                      <option value="Neurobehavioral effects">Neurobehavioral effects</option>
+                      <option value="No Injury">No Injury</option>
+                      <option value="Non-Hodgkin's lymphoma (NHL)">Non-Hodgkin's lymphoma (NHL)</option>
+                      <option value="Ovarian cancer">Ovarian cancer</option>
+                      <option value="Other Inury">Other Inury</option>
+                      <option value="Pancreatic cancer">Pancreatic cancer</option>
+                      <option value="Parkinson's disease">Parkinson's disease</option>
+                      <option value="Prostate cancer">Prostate cancer</option>
+                      <option value="Renal toxicity">Renal toxicity</option>
+                      <option value="Scleroderma">Scleroderma</option>
+                      <option value="Sinus cancer">Sinus cancer</option>
+                      <option value="Thyroid cancer">Thyroid cancer</option>
+                      <option value="No Injury ">No Injury </option>
+                      <option value="Other Inury">Other Inury</option>
                     </select>
                   </label>
 
