@@ -87,12 +87,12 @@ const Banner = () => {
               <div className='article'>
                 <h1>$7 billion Compensation for Camp Lejeune Toxic Water Victims and their Loved Ones! </h1>
                 <h2><a href="/#left-form" className='apply'>Apply Now</a>   & Get Instant Eligibility Check.</h2>
-                <h5><i class="fa-regular fa-circle-check"></i>	Get Your Medical Bills
-                  Paid.
+                <h5><i class="fa-regular fa-circle-check"></i> <span>Get Your Medical Bills
+                  Paid.</span>	
                 </h5>
-                <h5><i class="fa-sharp fa-solid fa-scroll"></i>	Complete the no-cost claim review form.
+                <h5><i class="fa-sharp fa-solid fa-scroll"></i> <span>Complete the no-cost claim review form.</span>	
                 </h5>
-                <h5><i class="fa-solid fa-heart-pulse"></i>	Free Enrollment.
+                <h5><i class="fa-solid fa-heart-pulse"></i> <span>Free Enrollment.</span>	
                 </h5>
                 <h4><span className='million'>you could be owed $3 million</span> in compensation.<br /> ACT NOW LIMITED TIME TO FILE!</h4>
                 <div className='banner-button'>
@@ -116,14 +116,14 @@ const Banner = () => {
                   <label>
                     Did you or a loved one serve, live, or work at Camp Lejeune for at least 30 days between 1953 and 1987?
                     <br />
-                    <select name="camp_lj" id="">
-                      <option value="" selected className="form-control">Please Select...</option>
+                    <select  name="camp_lj" id="form-control">
+                      <option value="" selected className="form-control ">Please Select...</option>
                       <option value="Yes">Yes</option>
                       <option value="No">No</option>
                     </select>
                   </label>
                   <br />
-                  <br />
+                 
                   <label htmlFor="first_name">First Name</label><br />
                   <input className="form-control" type="text" name="first_name" placeholder="Enter First Name..." />
 

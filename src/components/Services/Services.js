@@ -21,14 +21,14 @@ const Services = () => {
                     <img src={service2} class="rounded mx-auto d-block" alt="..." />
                     <div class="card-body">
                         <h5 class="card-title">SPECIALIST ATTORNEYS</h5>
-                        <p class="card-text">Experienced and successful attorneys to assist you with your compensation</p>
+                        <p class="card-text">Our law firm utlizes high grade security and technology to ensure all client personally identifiable information is kept private.</p>
                         
                     </div>
                 </div>
                 <div class="card">
                     <img src={service3} class="rounded mx-auto d-block" alt="..." />
                     <div class="card-body">
-                        <h5 class="card-title">MAXIMUM SETTLEMENT</h5>
+                        <h5 class="card-title">UPTO 3 MILLION SETTLEMENT</h5>
                         <p class="card-text">Camp lejeune attorneys make sure you are compensated for the most money your are eligible for.</p>
                         
                     </div>
@@ -36,8 +36,8 @@ const Services = () => {
                 <div class="card">
                     <img src={service4} class="rounded mx-auto d-block" alt="..." />
                     <div class="card-body">
-                        <h5 class="card-title">JUSTICE SERVED</h5>
-                        <p class="card-text">Negotiating on your behalf to make sure you’re properly compensated, we do the hard work to make it a success.</p>
+                        <h5 class="card-title">Fast 2-Minute Form</h5>
+                        <p class="card-text">Find out if you qualify in under 120 seconds. If you do qualify, then the rest of the forms will only take 2 more minutes to fill out.</p>
                         
                     </div>
                 </div>

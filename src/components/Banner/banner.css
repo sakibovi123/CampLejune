@@ -1,5 +1,5 @@
 .banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../assets/camp-lejeune.jpg");
+    background: linear-gradient(rgba(75, 70, 70, 0.7), rgba(0, 0, 0, 0.7)), url("../../assets/camp-lejeune.jpg");
     background-position: center;
     background-size: cover;
     height: 100%;
@@ -65,8 +65,8 @@
     margin-left: 70px;
 }
 
-.article h5 i {
-    padding-right: 20px;
+.article h5 span {
+    padding-left: 20px;
 }
 
 /* .article h5:hover {
@@ -76,7 +76,7 @@
 .million {
     font-size: 25px;
     font-weight: 700;
-    /* color: rgb(54, 33, 173); */
+    color: #B35F48;
 }
 
 .banner-box {
@@ -97,7 +97,7 @@ button {
 }
 
 .phone-button {
-    background-color: rgb(54, 33, 173);
+    background: #B35F48;
     color: #fff;
     margin-right: 25px;
     margin-bottom: 50px;
@@ -158,16 +158,16 @@ button {
 
 .get-button {
     background-color: #fff;
-    color: rgb(54, 33, 173);
+    color: #B35F48;
 }
 
 .get-button:hover {
-    background-color: rgb(54, 33, 173);
+    background: #B35F48;
     color: #fff;
 }
 
 .apply {
-    background: rgb(54, 33, 173);
+    background: #B35F48;
     font-weight: bold;
     color: #fff;
 }
@@ -190,7 +190,7 @@ button {
 }
 
 .form-submit {
-    background-color: rgb(54, 33, 173);
+    background: #B35F48;
     color: #fff;
     font-weight: 700;
     font-size: 15px;
@@ -201,11 +201,20 @@ button {
 }
 
 .form-submit:hover {
-    color: rgb(54, 33, 173);
-    background: rgb(197, 193, 193);
+    color: #B35F48;
+    background: rgb(215, 213, 213);
 }
-
-
+#form-control{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 2px solid rgb(236, 233, 233);
+}
+.radio {
+    margin-top: 5px;
+}
+label{
+    margin-bottom: 5px;
+}
 
 @media screen and (max-width: 780px) {
     .article {
