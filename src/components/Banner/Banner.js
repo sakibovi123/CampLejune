@@ -99,10 +99,10 @@ const Banner = () => {
               <div className='article'>
                 <h1>$7 billion Compensation for Camp Lejeune Toxic Water Victims and their Loved Ones! </h1>
 <h2><span className='apply'>Apply Now</span>   & Get Instant Eligibility Check.</h2>
-                <h5><i class="fa-regular fa-circle-check"></i>	Get Your <span className='apply'>Medical Bills</span>
+                <h5><i class="fa-regular fa-circle-check"></i>	Get Your Medical Bills 
                    Paid.
                 </h5>
-                <h5><i class="fa-sharp fa-solid fa-scroll"></i>	Complete the <span className='apply'>no-cost claim</span>  review form.
+                <h5><i class="fa-sharp fa-solid fa-scroll"></i>	Complete the no-cost claim review form.
                 </h5>
                 <h5><i class="fa-solid fa-heart-pulse"></i>	Free Enrollment.
                 </h5>
@@ -220,7 +220,7 @@ const Banner = () => {
                     </select>
                   </label>
 
-                  <button className="form-submit ">Send Request</button>
+                  <button className="form-submit ">Submit</button>
 
                 </form>
               </div>
