@@ -18,7 +18,7 @@ const Blog = () => {
         <div className='blog'>
             <div>
                 <h1>3 SIMPLE STEPS TO MAKING A CAMP LEJEUNE CLAIM</h1>
-                <div className='container'>
+                <div className='content-blog'>
                     <div className='blog-box'>
                         <div className='row'>
                             <div className='col-md-4'>
