@@ -97,16 +97,16 @@ const Banner = () => {
           <Row className='align-items-center'>
             <Col xs={12} md={6} xl={7}>
               <div className='article'>
-                <h1>$7 billion in the Camp Lejeune Toxic Water Compensation! <span className='apply'>Apply Now</span>  if you are a Victim or their Loved ones & See if you Qualify.</h1>
-
+                <h1>$7 billion Compensation for Camp Lejeune Toxic Water Victims and their Loved Ones! </h1>
+<h2><span className='apply'>Apply Now</span>   & Get Instant Eligibility Check.</h2>
                 <h5><i class="fa-regular fa-circle-check"></i>	Get Your <span className='apply'>Medical Bills</span>
                    Paid.
                 </h5>
                 <h5><i class="fa-sharp fa-solid fa-scroll"></i>	Complete the <span className='apply'>no-cost claim</span>  review form.
                 </h5>
-                <h5><i class="fa-solid fa-heart-pulse"></i>	Enrollment.
+                <h5><i class="fa-solid fa-heart-pulse"></i>	Free Enrollment.
                 </h5>
-                <h4>You could be owed $1,000s in compensation.<br /> ACT NOW LIMITED TIME TO FILE!</h4>
+                <h4><span className='million'>you could be owed $3 million</span> in compensation.<br /> ACT NOW LIMITED TIME TO FILE!</h4>
                 <div className='banner-button'>
                   <a href="tel:+18559390621">
                     <button className='phone-button'><i class="fa-solid fa-phone" /> (855) 939-0621</button>

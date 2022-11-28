@@ -27,12 +27,18 @@
 }
 
 .article h1 {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 700;
     color: white;
     padding-top: 30px;
     margin-bottom: 20px;
     margin-left: 70px;
+}
+
+.article h2{
+    color: #fff;
+    margin-left: 70px;
+    margin-bottom: 20px;
 }
 
 .article h4 {
@@ -60,10 +66,15 @@
 .article h5:hover{
     color: #FD5D14;
 }
+.million{
+    font-size: 25px;
+    font-weight: 700;
+    color: #FD5D14;
+}
 
 .banner-box{
     margin-bottom: 30px;
-    margin-top: -90px;
+    margin-top: -50px;
 }
 
 .banner-button {
@@ -201,6 +212,12 @@ button {
         margin-bottom: 0px;
         margin-left: 0;
 padding-top: 40px;
+    }
+    .article h2{
+        font-size: 27px;
+        margin-left: 0;
+        text-align: center;
+        margin-top: 20px;
     }
     .banner{
         padding: 0;

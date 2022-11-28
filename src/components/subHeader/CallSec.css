@@ -65,6 +65,9 @@ animation-timing-function: linear;
   text-decoration: underline;
   color: #fff;
 }
+.subheader a{
+  color: black;
+}
 
 .subheader a span{
   font-size: 28px;
