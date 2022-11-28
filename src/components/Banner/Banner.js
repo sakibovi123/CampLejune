@@ -90,11 +90,11 @@ const Banner = () => {
                 <h5><i class="fa-regular fa-circle-check"></i> <span>Get Your Medical Bills
                   Paid.</span>	
                 </h5>
-                <h5><i class="fa-sharp fa-solid fa-scroll"></i> <span>Complete the no-cost claim review form.</span>	
+                <h5><i class="fa-sharp fa-solid fa-scroll"></i> <span>Complete the<span className='cost'>no-cost</span>  claim review form.</span>	
                 </h5>
                 <h5><i class="fa-solid fa-heart-pulse"></i> <span>Free Enrollment.</span>	
                 </h5>
-                <h4><span className='million'>you could be owed $3 million</span> in compensation.<br /> ACT NOW LIMITED TIME TO FILE!</h4>
+                <h4>you could be owed <span className='million'> $3 million</span> in compensation.<br /> ACT NOW LIMITED TIME TO FILE!</h4>
                 <div className='banner-button'>
                   <a href="tel:+18559390621" onClick={pushData}>
                     <button className='phone-button'><i class="fa-solid fa-phone" /> (855) 939-0621</button>
@@ -131,7 +131,7 @@ const Banner = () => {
                   <input className="form-control" type="text" name="last_name" placeholder="Enter Last Name..." required/>
 
                   <label htmlFor="phone">Phone</label><br />
-                  <input className="form-control" type="text" name="phone" placeholder="Enter Phone..." required/>
+                  <input className="form-control" type="number" name="phone" placeholder="Enter Phone..." required/>
 
                   <label htmlFor="email">Email</label><br />
                   <input className="form-control" type="email" name="email" placeholder="Enter Email..." required/><br />
@@ -205,7 +205,7 @@ const Banner = () => {
                   <br />
                   <br />
                   <label>Briefly describe what happened</label>
-                  <textarea  className="form-control" name="comment" id="" cols="30" rows="1" required></textarea>
+                  <textarea  className="form-control" name="comment" id="" cols="30" rows="2" required></textarea>
 
                   <button className="form-submit ">Submit</button>
 
