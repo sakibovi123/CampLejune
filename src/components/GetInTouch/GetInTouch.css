@@ -1,0 +1,124 @@
+.getintouch {
+    margin: 90px 130px;
+}
+
+.getbanner {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    background-position: center;
+    /* background-size: cover; */
+    height: 100%;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 90px;
+    border-radius: 30px;
+}
+
+.camp {
+    color: #fff;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.camp h1 {
+    font-size: 60px;
+    margin-bottom: 70px;
+}
+
+.camp h5 {
+    font-size: 40px;
+}
+
+.get {
+    margin-bottom: 50px;
+}
+
+.get p {
+    font-size: 20px;
+}
+
+.banner-form {
+    width: 350px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    color: #000000;
+    font-weight: 600;
+    margin-left: 80px;
+    position: relative;
+    background: #fff;
+    /* border: 10px inset #fff; */
+}
+
+.form-submit {
+    background-color: #FD5D14;
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 25px;
+    margin-top: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.form-submit:hover {
+    color: #FD5D14;
+    background: rgb(70, 69, 69);
+}
+
+.radio input {
+    margin-left: 10px;
+}
+
+
+@media screen and (max-width: 780px) {
+    .getintouch {
+        margin: 0;
+    }
+
+    .camp h1 {
+        font-size: 30px;
+        color: white;
+        text-align: center;
+        justify-content: center;
+        margin-top: 80px;
+        
+    }
+    .camp h5{
+        font-size: 20px;
+    }
+    .get p{
+font-size: 16px;
+    }
+
+    .getbanner {
+        padding: 0;
+    }
+
+    .banner-button {
+        margin: 0;
+        font-size: 10px;
+    }
+
+    .camp h4 {
+        font-size: 15px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    .banner-form {
+        margin-left: 10px;
+        margin-bottom: 40px;
+
+    }
+
+    .banner-box {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

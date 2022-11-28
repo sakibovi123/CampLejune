@@ -90,12 +90,25 @@ const Banner = () => {
 
     <div>
 
-      <div className='banner banner-text' id='home'>
+<div className='banner'>
+      <div className='article'>
+        <h1>WERE YOU OR A LOVED ONE BASED AT CAMP LEJEUNE BETWEEN 1953 TO 1987?</h1>
+        <h4>You could be owed $1,000s in compensation. ACT NOW LIMITED TIME TO FILE!</h4>
+        <div className='banner-button'>
+          <button className='phone-button'><i class="fa-solid fa-phone" /> (855) 939-0621</button>
+          <button className='get-button'>GET MY FREE CLAIM REVIEW</button>
+        </div>
+      </div>
+    </div>
+
+      {/* <div className='banner banner-text' id='home'>
         <div className='banner-box'>
           <Row className='align-items-center'>
             <Col xs={12} md={6} xl={7}>
               <div className='article'>
                 <h1>WERE YOU OR A LOVED ONE BASED AT CAMP LEJEUNE BETWEEN 1953 TO 1987?</h1>
+                <h3>On August 10, 2022, President Biden signed the “Honoring our PACT Act,” which includes the Camp Lejeune Justice Act of 2022. The new law creates a landmark remedy for individuals, particularly veterans and their surviving family members, who resided, worked, or were exposed to latent disease by water supplied by the United States at Camp Lejeune in North Carolina between August 1, 1953, and December 31, 1987. 
+</h3>
                 <h4>You could be owed $1,000s in compensation.<br /> ACT NOW LIMITED TIME TO FILE!</h4>
                 <div className='banner-button'>
                   <a href="tel:+18559390621">
@@ -107,7 +120,7 @@ const Banner = () => {
 
             </Col>
 
-            {/* *****************banner form*************** */}
+            
 
             <Col xs={12} md={6} xl={5}>
               <div className='banner-form form-group'>
@@ -153,7 +166,7 @@ const Banner = () => {
             </Col>
           </Row>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

@@ -27,7 +27,7 @@
 }
 
 .article h1 {
-    font-size: 40px;
+    font-size: 60px;
     font-weight: 700;
     color: white;
     text-align: center;
@@ -40,6 +40,12 @@
     justify-content: center;
     font-size: 18px;
     margin-top: 20px;
+}
+.article h3{
+    color: #fff;
+    font-size: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .banner-box{
@@ -131,7 +137,7 @@ button {
 }
 
 /* form style */
-.banner-form {
+/* .banner-form {
     width: 350px;
     border-radius: 10px;
     text-align: center;
@@ -142,9 +148,9 @@ button {
     position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     border: 10px inset #fff;
-}
+} */
 
-.form-submit {
+/* .form-submit {
     background-color: #fff;
     color: #FD5D14;
     font-weight: 700;
@@ -153,18 +159,22 @@ button {
     margin-top: 8px;
     padding-left: 20px;
     padding-right: 20px;
-}
+} */
 
-.form-submit:hover{
+/* .form-submit:hover{
     color: #fff;
     background: #FD5D14;
-}
+} */
 
-.radio input {
+/* .radio input {
     margin-left: 10px;
-}
+} */
 
 @media screen and (max-width: 780px) {
+    .article{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
     .article h1 {
         font-size: 30px;
         color: white;
