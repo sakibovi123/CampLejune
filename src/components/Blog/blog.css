@@ -19,10 +19,11 @@
 }
 
 .get-buton button {
-    background: #0E5E6F;
+    background: #285430;
     color: #fff;
     padding-left: 30px;
     padding-right: 30px;
+    font-size: 25px;
 }
 
 .card-blog {

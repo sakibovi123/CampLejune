@@ -16,7 +16,7 @@
 }
 
 .article h1 {
-    font-size: 40px;
+    font-size: 58px;
     font-weight: 700;
     color: white;
     margin-bottom: 20px;
@@ -31,14 +31,14 @@
 
 .article h4 {
     color: #fff;
-    font-size: 18px;
+    font-size: 23px;
     margin-top: 20px;
-    line-height: 35px;
+    line-height: 45px;
 }
 
 .article h3 {
     color: #fff;
-    font-size: 25px;
+    font-size: 28px;
 }
 
 .article h5 {
@@ -113,6 +113,7 @@ button {
     padding-right: 30px;
     font-weight: 700;
     border-radius: 5px;
+    font-size: 22px;
 }
 
 .phone-button i {
@@ -171,6 +172,7 @@ button {
     font-style: italic;
     font-weight: 700;
     border-radius: 5px;
+    font-size: 22px;
 }
 
 .get-button:hover {
@@ -201,10 +203,14 @@ button {
 
 
 .banner-form {
-    width: 420px;
+    width: 550px;
     border-radius: 10px;
     text-align: center;
-    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    /* padding: 15px; */
     color: #000000;
     font-weight: 600;
     margin-right: 90px;
@@ -214,32 +220,35 @@ button {
     margin-bottom: 130px;
 }
 
-.form-submit {
-
+/* .form-submit {
     background: #3621ad;
     color: #fff;
     font-weight: 700;
-    font-size: 15px;
+    font-size: 20px;
     border-radius: 15px;
     margin-top: 8px;
     padding-left: 20px;
     padding-right: 20px;
-}
+} */
 
 #form-submit {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     background: #3621ad;
     color: #fff;
     font-style: italic;
+    font-size: 20px;
 }
 
 .banner-form h4 {
-    color: #3621ad;
-    font-weight: 800;
+    color: #900C3F;
+    font-weight: 900;
     font-style: italic;
+    font-size: 30px;
 }
-
+input select{
+    
+}
 /* #form-control {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -261,6 +270,8 @@ label {
     justify-content: center;
 }
 
+
+
 @media screen and (max-width: 780px) {
     .banner {
         display: block;
@@ -279,16 +290,20 @@ label {
 
     .article h2 {
         line-height: 50px;
+        font-size: 27px;
     }
 
     .phone-button {
         width: 140px;
         border-radius: 10px;
+        font-size: 15px;
     }
 
+    
     .get-button {
         width: 140px;
         border-radius: 10px;
+        font-size: 15px;
     }
 
     /* #form-control {
@@ -302,21 +317,18 @@ label {
         color: white;
     }
 
-    .article h2 {
-        font-size: 27px;
-    }
-
     .banner-button {
         font-size: 10px;
     }
 
     .article h5 {
 
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .article h4 {
-        font-size: 15px;
+        font-size: 17px;
+        line-height: 30px;
     }
 
     .banner-form {

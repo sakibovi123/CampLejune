@@ -66,7 +66,7 @@ const Blog = () => {
 
                 </div>
 
-                <div className='get-buton'><a href="/#left-form"><button onClick={pushData}>Click to Speak With Our Lawyer Now!</button></a></div>
+                <div className='get-buton'><a href="tel:+18559390621"><button onClick={pushData}>Click to Speak With Our Lawyer Now!</button></a></div>
 
             </div>
         </div>

@@ -82,10 +82,7 @@ const Banner = () => {
   }
 
   return (
-
     <div >
-
-
       <div className='banner banner-text' id='home'>
         <div className='d-flex justify-content-center'>
           <div className='article'>
@@ -112,20 +109,21 @@ const Banner = () => {
         <div>
           <div>
 
+
             <div className='d-flex justify-content-center'>
               <div className='banner-form form-group'>
-              <h4>Request a Free Legal Consultation</h4>
+                <h4>Request a Free Legal Consultation</h4>
                 <form id='left-form' onSubmit={sendDataToLeadProsper}>
-                  <label>
+                <label>
                     Did you or a loved one serve, live, or work at Camp Lejeune for at least 30 days between 1953 and 1987?
-
-                    <select name="camp_lj" id="" className="form-control">
-                      <option value="" selected className="form-control">Please Select...</option>
-                      <option value="Yes">Yes</option>
-                      <option value="No">No</option>
-                    </select>
-
-
+                    <div className='radio'>
+                    <select name="camp_lj" id="cpform" className="form-control" required>
+                        <option value="" selected>Please select...</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                      </select>
+                    
+                    </div>
                   </label>
                   <br />
 
@@ -141,8 +139,6 @@ const Banner = () => {
                   <label htmlFor="email">Email</label><br />
                   <input className="form-control" type="email" name="email" required /><br />
 
-
-
                   <label>
                     Do you already have an attorney representing you for this claim?
                     <div className='radio'>
@@ -151,7 +147,6 @@ const Banner = () => {
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
                       </select>
-
                     </div>
                   </label>
                   <br />
@@ -159,6 +154,7 @@ const Banner = () => {
                   <label>
                     What injury were you or your loved one diagnosed with?
                     <select className="form-control" name="injury_type_list" required>
+                    <option value="Please select">Please select...</option>
                       <option value="Aplastic anemia">Aplastic anemia</option>
                       <option value="Appendix cancer">Appendix cancer</option>
                       <option value="Amyotrophic lateral">Amyotrophic lateral</option>
@@ -211,12 +207,7 @@ const Banner = () => {
                   <br />
                   <label>Briefly describe what happened</label>
                   <textarea className="form-control" name="comment" id="" cols="30" rows="2" required></textarea>
-
-                  <button className="form-submit ">Submit</button>
-
-                  <button id='form-submit' className=" form-control ">Start My free consultation</button>
-
-
+                  <button id='form-submit' className=" form-submit form-control ">Start My free consultation</button>
                 </form>
               </div>
             </div>
