@@ -102,12 +102,14 @@ const Banner = () => {
 
   return (
 
-    <div>
+    <div >
+
+    
 
       <div className='banner banner-text' id='home'>
         <div className='banner-box'>
-          <Row className='align-items-center'>
-          <Col xs={12} md={6} xl={7} >
+          <div className='align-items-center row'>
+          <div className='col-md-6' >
               <div className='article'>
                 <h1>$7 billion Compensation for Camp Lejeune Toxic Water Victims and their Loved Ones! </h1>
                 <h2><a href="/#left-form" className='apply'>Apply Now</a>   & Get Instant Eligibility Check.</h2>
@@ -130,11 +132,11 @@ const Banner = () => {
                 </div>
               </div>
 
-            </Col>
+            </div>
 
 
 
-            <Col xs={12} md={6} xl={7} >
+            <div className='col-md-6' >
               <div className='banner-form form-group'>
                 <form id='left-form' onSubmit={sendDataToLeadProsper}>
                   <label>
@@ -235,8 +237,8 @@ const Banner = () => {
 
                 </form>
               </div>
-            </Col>
-          </Row>
+            </div>
+          </div>
         </div>
       </div>
     </div>
