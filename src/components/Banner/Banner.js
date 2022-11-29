@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import './banner.css';
 import { useNavigate } from "react-router-dom";
 
@@ -107,7 +107,7 @@ const Banner = () => {
       <div className='banner banner-text' id='home'>
         <div className='banner-box'>
           <Row className='align-items-center'>
-            <Col xs={12} md={6} xl={7}>
+          <Col xs={12} md={6} xl={7} >
               <div className='article'>
                 <h1>$7 billion Compensation for Camp Lejeune Toxic Water Victims and their Loved Ones! </h1>
                 <h2><a href="/#left-form" className='apply'>Apply Now</a>   & Get Instant Eligibility Check.</h2>
@@ -134,14 +134,14 @@ const Banner = () => {
 
 
 
-            <Col xs={12} md={6} xl={5}>
+            <Col xs={12} md={6} xl={7} >
               <div className='banner-form form-group'>
                 <form id='left-form' onSubmit={sendDataToLeadProsper}>
                   <label>
                     Did you or a loved one serve, live, or work at Camp Lejeune for at least 30 days between 1953 and 1987?
                     <br />
                     <select  name="camp_lj" id="form-control" required>
-                      <option value="" selected className="form-control ">Please Select...</option>
+                      <option value="" selected className="form-control "> Please Select...</option>
                       <option value="Yes">Yes</option>
                       <option value="No">No</option>
                     </select>

@@ -8,9 +8,13 @@
     place-items: center;
     padding: 50px;
     position: relative;
-    background-color: rgba(0, 0, 0, 0.3);
+    /* background-color: rgba(0, 0, 0, 0.3); */
 }
 
+Col{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
 
 .banner-form label input {
     margin-left: 10px;
@@ -110,7 +114,6 @@
 .banner-box {
     margin-bottom: 30px;
     margin-top: -50px;
-
 }
 
 .banner-button {
@@ -220,7 +223,7 @@ button {
 
 /* form style */
 .banner-form {
-    width: 380px;
+    width: 440px;
     border-radius: 10px;
     text-align: center;
     padding: 15px;
@@ -251,15 +254,16 @@ button {
     background: rgb(215, 213, 213);
 } */
 
+
 #form-control {
     margin-top: 5px;
     margin-bottom: 5px;
     border: 2px solid rgb(236, 233, 233);
-    width: 340px;
-    /* margin-right: 10px; */
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 5px;
+    width: 390px;
+    margin-right: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 8px;
 }
 
 .radio {
@@ -314,9 +318,13 @@ label {
         margin-left: 0;
         margin-top: 20px;
     }
+    Col{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
 
     .banner {
-        padding: 0;
+        padding: 0 !important;
     }
 
     .banner-button {

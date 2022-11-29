@@ -5,6 +5,7 @@ import Blog from '../../components/Blog/Blog'
 import Journal from '../../components/Journal/Journal'
 import Services from '../../components/Services/Services'
 import Testimonial from '../../components/Testimonial/Testimonial';
+import TopFooter from '../../components/TopFooter/TopFooter'
 
 
 const Home = () => {
@@ -19,7 +20,7 @@ const Home = () => {
       <Journal />
       <Blog />
       <Testimonial />
-      
+      <TopFooter />
     </div>
   )
 }
