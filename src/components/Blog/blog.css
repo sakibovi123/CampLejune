@@ -3,10 +3,14 @@
     background-color: rgb(250, 249, 249);
     text-align: center;
 }
-.blog-box{
+ .blog-box{
     text-align: center;
     justify-content: center;
     margin-left: 70px;
+}
+.content-blog{
+    margin-left: 90px;
+    margin-right: 40px;
 }
 
 .blog h1 {
@@ -15,7 +19,7 @@
 }
 
 .get-buton button {
-    background-color: #FD5D14;
+    background: #0E5E6F;
     color: #fff;
     padding-left: 30px;
     padding-right: 30px;
@@ -23,7 +27,7 @@
 
 .card-blog {
     position: relative;
-    width: 400px;
+    width: 350px;
     height: 300px;
     border-radius: 10px;
     box-shadow: 0px 5px 20px rgba(203, 200, 200, 0.5);
@@ -48,7 +52,7 @@
 .content {
     padding: 10px 20px;
     text-align: center;
-    transform: translateY(-150px);
+    transform: translateY(-180px);
     opacity: 1;
     transition: 0.3s;
     
@@ -67,18 +71,25 @@
     margin-top: 140px;
     margin-bottom: 50px;
     margin-left: 0;
-    
+    margin-right: 0;
+}
+
+.cimg{
+    object-fit: cover;
+    width: 50px;
+   height: 100px;
 }
 
 @media screen and (max-width: 780px) {
     .card-blog{
         margin-bottom: 150px;
         padding-left: 0;
-        width: 300px;
+        width: 280px;
     }
     .blog-box{
         text-align: center;
         margin-left: 0;
+        margin-right: 10px;
     }
     .get-buton{
         margin-top: -90px;
@@ -86,4 +97,12 @@
     .content{
         transform: translateY(-200px);
     }
-}
+    .content-blog{
+        margin-left: 0;
+        margin-right: 0;
+    }
+} 
+
+
+
+

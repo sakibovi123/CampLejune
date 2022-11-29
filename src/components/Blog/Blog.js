@@ -1,8 +1,9 @@
 import React from 'react';
-import img1 from '../../assets/img1.jfif';
+import img1 from '../../assets/download.jfif';
 import img2 from '../../assets/img2.jpg';
 import img3 from '../../assets/img3.jpg';
 import './blog.css';
+
 
 const Blog = () => {
     function pushData() {
@@ -18,7 +19,7 @@ const Blog = () => {
         <div className='blog'>
             <div>
                 <h1>3 SIMPLE STEPS TO MAKING A CAMP LEJEUNE CLAIM</h1>
-                <div className='container'>
+                <div className='content-blog'>
                     <div className='blog-box'>
                         <div className='row'>
                             <div className='col-md-4'>
@@ -55,7 +56,7 @@ const Blog = () => {
                                     <div className='content'>
                                         <h2>MAXIMUM COMPENSATION</h2>
                                         <p>We believe that
-                                            affected is due the maximum compensation for their suffering.Contaminated water at camp lejeune lawsuit we ensure we get you the maximum settlement you deserve.</p>
+                                            affected is due the maximum compensation for their suffering.Contaminated water at camp lejeune lawsuit  ensure that the maximum settlement you deserve.</p>
                                     </div>
                                 </div>
                             </div>
@@ -64,11 +65,12 @@ const Blog = () => {
                     </div>
 
                 </div>
-                <div className='get-buton'><button onClick={pushData}>GET FREE QUOTE</button></div>
+
+                <div className='get-buton'><a href="/#left-form"><button onClick={pushData}>Click to Speak With Our Lawyer Now!</button></a></div>
 
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Blog;

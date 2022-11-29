@@ -1,5 +1,6 @@
 .testimonials{
-    background: rgb(228, 227, 227);
+    background: rgb(241, 241, 241);
+    margin-bottom: 60px;
 }
 .gpt3__cta {
     display: flex;
@@ -10,7 +11,7 @@
     padding: 2rem;
     /* margin: 4rem; */
 
-    background: #FD5D14;
+    background: #0F3460;
 }
 
 .gpt3__cta-content {
@@ -40,20 +41,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    margin-left: 2rem;
+    
 }
 
 .gpt3__cta-btn button {
-    background: linear-gradient(rgba(124, 119, 119, 0.7),rgba(58, 53, 53, 0.7));
+    background: #0E5E6F;
     color: #fff;
-    font-family: var(--font-family);
     font-weight: 700;
     font-size: 18px;
     /* line-height: 30px; */
-    padding: 0.5rem 1rem;
-    
-
+    /* padding: 0.5rem 1rem; */
+    justify-content: center;
+    align-items: center;
     border: none;
     outline: none;
     cursor: pointer;

@@ -30,4 +30,8 @@
     .card-group{
         margin-top: -50px;
     }
+    .card{
+        align-items: center;
+        justify-content: center;
+    }
 }

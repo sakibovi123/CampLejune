@@ -75,7 +75,7 @@ const Footer = () => {
                     <div class="col-12">
                         <div class="line"></div>
                         <div class="second3">
-                        Copyright © 2022 Camp Lejeune Us. All rights reserved.
+                        Copyright © 2022 Camp Lejeune US. All rights reserved.
                         </div>
                     </div>
                 </div>

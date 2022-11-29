@@ -1,5 +1,5 @@
 .subheader{
-  background-color: #FD5D14;
+  background: #0E5E6F;
   color: #fff;
   padding: 5px;
   text-align: center;
@@ -66,7 +66,7 @@ animation-timing-function: linear;
   color: #fff;
 }
 .subheader a{
-  color: black;
+  color: #fff;
 }
 
 .subheader a span{
@@ -77,9 +77,13 @@ animation-timing-function: linear;
 @media (max-width: 780px) {
   .subheader{
       font-size: 14px;
+      padding-top: 10px;
+      padding-bottom: 10px;
   }
   .subheader a span{
       font-size: 18px;
-  
+  }
+  .subheader a{
+    cursor: pointer;
   }
 }

@@ -1,16 +1,89 @@
 .banner {
-    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("https://api.asm.skype.com/v1/objects/0-ea-d4-e3a48f5f72572dcdaf37e7abc20bd9c1/views/imgpsh_fullsize_anim");
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../assets/camp-lejeune.jpg");
     background-position: center;
     background-size: cover;
     height: 100%;
     background-repeat: no-repeat;
-    display: grid;
+    display: flex;
     place-items: center;
-    padding: 50px;
     position: relative;
-    background-color: rgba(0, 0, 0, 0.3);
 }
 
+
+.article {
+    margin-left: 90px;
+    margin-right: 60px;
+}
+
+.article h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.article h2 {
+    color: #fff;
+    font-size: 35px;
+    margin-bottom: 20px;
+    line-height: 70px;
+}
+
+.article h4 {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+    line-height: 35px;
+}
+
+.article h3 {
+    color: #fff;
+    font-size: 25px;
+}
+
+.article h5 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.article h5 i {
+    padding-right: 20px;
+}
+
+.million {
+    font-size: 35px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+            #ececf0 0%,
+            #8d5ebe 29%,
+            #ff1361 67%,
+            #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.cost {
+    color: rgb(243, 161, 38);
+    font-size: 40px;
+}
 
 .banner-form label input {
     margin-left: 10px;
@@ -20,84 +93,26 @@
     margin-left: 10px;
 }
 
-.article {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-left: 40px;
-}
-
-.article h1 {
-    font-size: 40px;
-    font-weight: 700;
-    color: white;
-    padding-top: 30px;
-    margin-bottom: 20px;
-    margin-left: 70px;
-}
-
-.article h2{
-    color: #fff;
-    font-size: 35px;
-    margin-left: 70px;
-    margin-bottom: 20px;
-}
-
-.article h4 {
-    color: #fff;
-    font-size: 18px;
-    margin-top: 20px;
-    margin-left: 70px;
-}
-.article h3{
-    color: #fff;
-    font-size: 25px;
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
-.article h5{
-    color: #fff;
-    font-weight: 700;
-    font-size: 28px;
-    margin-bottom: 20px;
-    margin-left: 70px;
-}
-.article h5 i{
-    padding-right: 20px;
-}
-.article h5:hover{
-    color: #FD5D14;
-}
-.million{
-    font-size: 25px;
-    font-weight: 700;
-    color: #FD5D14;
-}
-
-.banner-box{
-    margin-bottom: 30px;
-    margin-top: -50px;
-}
-
 .banner-button {
-    margin: 30px;
     font-size: 15px;
-    margin-left: 70px;
+    margin-top: 20px;
 }
 
 button {
     padding: 10px;
     border: #fff;
-
 }
 
 .phone-button {
-    background-color: #FD5D14;
+    background: linear-gradient(90deg, #64aebe, #0E5E6F);
     color: #fff;
+    font-style: italic;
     margin-right: 25px;
     margin-bottom: 50px;
     padding-left: 30px;
     padding-right: 30px;
+    font-weight: 700;
+    border-radius: 5px;
 }
 
 .phone-button i {
@@ -148,106 +163,173 @@ button {
     80% {
         transform: rotate3d(0, 0, 1, 0deg);
     }
-
 }
 
 .get-button {
-    background-color: #fff;
-    color: #FD5D14;
+    background: #fff;
+    color: #0E5E6F;
+    font-style: italic;
+    font-weight: 700;
+    border-radius: 5px;
 }
 
 .get-button:hover {
-    background-color: #FD5D14;
+    background: linear-gradient(90deg, #64aebe, #0E5E6F);
     color: #fff;
 }
-.apply{
-    color: #FD5D14;
-    font-weight: bold;
+
+
+.apply {
+    background: #3621ad;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 15px;
+    margin-top: 8px;
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
 }
 
-/* form style */
+.apply:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+
 .banner-form {
-    width: 350px;
+    width: 420px;
     border-radius: 10px;
     text-align: center;
     padding: 15px;
     color: #000000;
     font-weight: 600;
-    margin-left: 80px;
+    margin-right: 90px;
     position: relative;
-    background: #fff;
+    background-image: linear-gradient(#ECEFF1, #CFD8DC);
+    margin-top: 50px;
+    margin-bottom: 130px;
 }
 
 .form-submit {
-    background-color: #FD5D14;
+
+    background: #3621ad;
     color: #fff;
     font-weight: 700;
-    font-size: 20px;
-    border-radius: 25px;
-    margin-top: 28px;
+    font-size: 15px;
+    border-radius: 15px;
+    margin-top: 8px;
     padding-left: 20px;
     padding-right: 20px;
 }
 
-.form-submit:hover{
-    color: #FD5D14;
-    background: rgb(197, 193, 193);
+#form-submit {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #3621ad;
+    color: #fff;
+    font-style: italic;
 }
 
+.banner-form h4 {
+    color: #3621ad;
+    font-weight: 800;
+    font-style: italic;
+}
 
+/* #form-control {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 2px solid rgb(236, 233, 233);
+    width: 370px;
+    margin-right: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 8px;
+} */
+
+.radio {
+    margin-top: 5px;
+}
+
+label {
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: center;
+}
 
 @media screen and (max-width: 780px) {
-    .article{
-        margin-left: 20px;
-        margin-right: 20px;
+    .banner {
+        display: block;
     }
+
+    .article {
+        margin-left: 20px;
+        margin-right: 0px;
+        padding-top: 25px;
+    }
+
+    .cost {
+        font-size: 30px;
+    }
+
+
+    .article h2 {
+        line-height: 50px;
+    }
+
+    .phone-button {
+        width: 140px;
+        border-radius: 10px;
+    }
+
+    .get-button {
+        width: 140px;
+        border-radius: 10px;
+    }
+
+    /* #form-control {
+        width: 300px;
+        background: #fff;
+    } */
+
+
     .article h1 {
         font-size: 30px;
         color: white;
-        text-align: center;
-        justify-content: center;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        margin-left: 0;
-padding-top: 40px;
     }
-    .article h2{
+
+    .article h2 {
         font-size: 27px;
-        margin-left: 0;
-        text-align: center;
-        margin-top: 20px;
-    }
-    .banner{
-        padding: 0;
     }
 
     .banner-button {
-        margin: 0;
         font-size: 10px;
     }
-    .article h5{
-        text-align: center;
-        margin-left: 0;
-        font-size: 22px;
-        margin-top: 20px;
-        padding-bottom: 0px;
+
+    .article h5 {
+
+        font-size: 18px;
     }
+
     .article h4 {
         font-size: 15px;
-        margin-top: 8px;
-        margin-bottom: 8px;
-        text-align: center;
-        margin-left: 0;
     }
 
     .banner-form {
-        margin-left: 10px;
-        margin-bottom: 60px;
-        margin-top: -70px;
+        width: 330px;
+        padding: 30px;
+        margin-right: 0px;
+        /* margin-left: 15px; */
+        display: inline-block;
+        /* align-items: center;
+        justify-content: center; */
     }
-    .banner-box{
-        padding-left: 20px;
-        padding-right: 20px;
-        
+
+    .million {
+        font-size: 20px;
     }
 }

@@ -1,115 +1,61 @@
-.getintouch {
-    margin: 90px 130px;
-}
-
-.getbanner {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-    background-position: center;
+.getintouch{
+    background-image: linear-gradient(#235c75, #0E5E6F);
+    margin-bottom: 40px;
+    padding-top: 40px;
     
-    height: 100%;
-    background-repeat: no-repeat;
-    display: grid;
-    place-items: center;
-
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.3);
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-top: 90px;
-    border-radius: 30px;
 }
 
-.camp {
-    color: #fff;
-    padding-left: 50px;
-    padding-right: 50px;
-}
 
-.camp h1 {
-    font-size: 40px;
-    font-weight: 700;
-    margin-bottom: 30px;
-}
-
-.camp h5 {
-    font-size: 25px;
-}
-
-.get {
-    margin-bottom: 25px;
-}
-
-.get p {
-    font-size: 18px;
-}
-
-.banner-form {
-    width: 350px;
-    border-radius: 10px;
+.getintouch h2{
+    /* display: flex; */
     text-align: center;
-    padding: 15px;
-    color: #000000;
-    font-weight: 600;
-    margin-left: 80px;
-    position: relative;
-    background: #fff;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 50px;
+}
+.injuries{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
     
 }
-
-
-
-
-
-.radio input {
-    margin-left: 10px;
+.injuries img{
+    width: 100% !important;
+    vertical-align: middle !important;
+    border-style: none;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+   
+    /* height: 150px; */
 }
-
-
-
-
-@media screen and (max-width: 780px) {
-    .getintouch {
-        margin: 0;
-    }
-
-    .camp h1 {
-        font-size: 30px;
-        color: white;
-        text-align: center;
-        justify-content: center;
-        margin-top: 80px;
-        
-    }
-    .camp h5{
-        font-size: 20px;
-    }
-    .get p{
-font-size: 16px;
-    }
-
-    .getbanner {
-        padding: 0;
-    }
-
-    .banner-button {
-        margin: 0;
-        font-size: 10px;
-    }
-
-    .camp h4 {
-        font-size: 15px;
-        margin-top: 8px;
-        margin-bottom: 8px;
-    }
-
-    .banner-form {
-        margin-left: 10px;
-        margin-bottom: 40px;
-
-    }
-
-    .banner-box {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+.item-injure{
+    background-color: #0E5E6F;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    padding: 3rem 0 5rem;
+    
+}
+.item{
+    padding: 3rem;
+    width: 390px;
+    /* height: 200px; */
+    margin: -1px;
+    border: solid 1px rgba(255, 255, 255, 0.2);
+    font-style: italic;
+    text-align: center;
+    vertical-align: middle;
+    /* overflow: hidden; */
+    /* transition: 300ms ease-out; */
+    color: #fff;
+}
+.item strong {
+    font-size: 35px;
+    font-weight: 700;
+}
+.item p{
+    font-size: 20px;
 }
