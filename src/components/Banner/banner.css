@@ -21,22 +21,26 @@
     color: white;
     margin-bottom: 20px;
 }
+
 .article h2 {
     color: #fff;
     font-size: 35px;
     margin-bottom: 20px;
     line-height: 70px;
 }
+
 .article h4 {
     color: #fff;
     font-size: 18px;
     margin-top: 20px;
     line-height: 35px;
 }
+
 .article h3 {
     color: #fff;
     font-size: 25px;
 }
+
 .article h5 {
     color: #fff;
     font-weight: 700;
@@ -100,7 +104,7 @@ button {
 }
 
 .phone-button {
-    background: linear-gradient(90deg,#64aebe,#0E5E6F);
+    background: linear-gradient(90deg, #64aebe, #0E5E6F);
     color: #fff;
     font-style: italic;
     margin-right: 25px;
@@ -155,6 +159,7 @@ button {
     77% {
         transform: rotate3d(0, 0, 1, -15deg);
     }
+
     80% {
         transform: rotate3d(0, 0, 1, 0deg);
     }
@@ -167,10 +172,12 @@ button {
     font-weight: 700;
     border-radius: 5px;
 }
-.get-button:hover{
-    background: linear-gradient(90deg,#64aebe,#0E5E6F);
+
+.get-button:hover {
+    background: linear-gradient(90deg, #64aebe, #0E5E6F);
     color: #fff;
 }
+
 
 .apply {
     background: #3621ad;
@@ -186,6 +193,7 @@ button {
     font-family: 'Noto Serif', serif;
     font-style: italic;
 }
+
 .apply:hover {
     text-decoration: none;
     color: #fff;
@@ -207,7 +215,7 @@ button {
 }
 
 .form-submit {
-   
+
     background: #3621ad;
     color: #fff;
     font-weight: 700;
@@ -218,10 +226,21 @@ button {
     padding-right: 20px;
 }
 
+#form-submit {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #3621ad;
+    color: #fff;
+    font-style: italic;
+}
 
+.banner-form h4 {
+    color: #3621ad;
+    font-weight: 800;
+    font-style: italic;
+}
 
-
-#form-control {
+/* #form-control {
     margin-top: 5px;
     margin-bottom: 5px;
     border: 2px solid rgb(236, 233, 233);
@@ -230,7 +249,7 @@ button {
     padding-top: 8px;
     padding-bottom: 8px;
     border-radius: 8px;
-}
+} */
 
 .radio {
     margin-top: 5px;
@@ -238,21 +257,25 @@ button {
 
 label {
     margin-bottom: 5px;
+    align-items: center;
+    justify-content: center;
 }
 
 @media screen and (max-width: 780px) {
-    .banner{
+    .banner {
         display: block;
     }
+
     .article {
         margin-left: 20px;
         margin-right: 0px;
         padding-top: 25px;
     }
-    .cost{
+
+    .cost {
         font-size: 30px;
     }
-    
+
 
     .article h2 {
         line-height: 50px;
@@ -268,10 +291,11 @@ label {
         border-radius: 10px;
     }
 
-    #form-control {
+    /* #form-control {
         width: 300px;
         background: #fff;
-    }
+    } */
+
 
     .article h1 {
         font-size: 30px;
@@ -281,31 +305,31 @@ label {
     .article h2 {
         font-size: 27px;
     }
-    
+
     .banner-button {
         font-size: 10px;
     }
 
     .article h5 {
-        
+
         font-size: 18px;
     }
 
     .article h4 {
-        font-size: 15px; 
+        font-size: 15px;
     }
 
     .banner-form {
         width: 330px;
+        padding: 30px;
         margin-right: 0px;
-        margin-left: 15px;
+        /* margin-left: 15px; */
         display: inline-block;
-        align-items: center;
-        justify-content: center;
+        /* align-items: center;
+        justify-content: center; */
     }
 
     .million {
         font-size: 20px;
     }
 }
-
