@@ -6,75 +6,47 @@
     background-repeat: no-repeat;
     display: flex;
     place-items: center;
-    padding: 50px;
     position: relative;
-    
-    /* background-color: rgba(0, 0, 0, 0.3); */
 }
 
-
-
-.banner-form label input {
-    margin-left: 10px;
-}
-
-.banner-form label select {
-    margin-left: 10px;
-}
 
 .article {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-left: 40px;
+    margin-left: 90px;
+    margin-right: 60px;
 }
 
 .article h1 {
     font-size: 40px;
     font-weight: 700;
     color: white;
-    padding-top: 30px;
     margin-bottom: 20px;
-    margin-left: 70px;
 }
-
 .article h2 {
     color: #fff;
     font-size: 35px;
-    margin-left: 70px;
     margin-bottom: 20px;
     line-height: 70px;
 }
-
 .article h4 {
     color: #fff;
     font-size: 18px;
     margin-top: 20px;
-    margin-left: 70px;
     line-height: 35px;
 }
-
 .article h3 {
     color: #fff;
     font-size: 25px;
-    padding-left: 50px;
-    padding-right: 50px;
 }
-
 .article h5 {
     color: #fff;
     font-weight: 700;
     font-size: 28px;
     margin-bottom: 20px;
-    margin-left: 70px;
 }
 
 .article h5 i {
     padding-right: 20px;
 }
-
-/* .article h5:hover {
-    color: #FD5D14;
-} */
 
 .million {
     font-size: 35px;
@@ -109,31 +81,34 @@
     font-size: 40px;
 }
 
-.banner-box {
-    margin-bottom: 30px;
-    margin-top: -50px;
+.banner-form label input {
+    margin-left: 10px;
+}
+
+.banner-form label select {
+    margin-left: 10px;
 }
 
 .banner-button {
-    margin: 30px;
     font-size: 15px;
-    margin-left: 70px;
+    margin-top: 20px;
 }
 
 button {
     padding: 10px;
     border: #fff;
-
 }
 
 .phone-button {
-    background: #0E5E6F;
+    background: linear-gradient(90deg,#64aebe,#0E5E6F);
     color: #fff;
+    font-style: italic;
     margin-right: 25px;
     margin-bottom: 50px;
     padding-left: 30px;
     padding-right: 30px;
     font-weight: 700;
+    border-radius: 5px;
 }
 
 .phone-button i {
@@ -180,29 +155,27 @@ button {
     77% {
         transform: rotate3d(0, 0, 1, -15deg);
     }
-
     80% {
         transform: rotate3d(0, 0, 1, 0deg);
     }
-
 }
 
 .get-button {
-    background-color: #fff;
+    background: #fff;
     color: #0E5E6F;
+    font-style: italic;
     font-weight: 700;
+    border-radius: 5px;
 }
-
-.get-button:hover {
-    background: #0E5E6F;
+.get-button:hover{
+    background: linear-gradient(90deg,#64aebe,#0E5E6F);
     color: #fff;
 }
 
 .apply {
-    background: rgb(243, 161, 38);
+    background: #3621ad;
     color: #fff;
     font-weight: 700;
-    /* font-size: 15px; */
     border-radius: 15px;
     margin-top: 8px;
     text-decoration: none;
@@ -213,13 +186,12 @@ button {
     font-family: 'Noto Serif', serif;
     font-style: italic;
 }
-
 .apply:hover {
     text-decoration: none;
     color: #fff;
 }
 
-/* form style */
+
 .banner-form {
     width: 420px;
     border-radius: 10px;
@@ -227,17 +199,16 @@ button {
     padding: 15px;
     color: #000000;
     font-weight: 600;
-    margin-left: 60px;
+    margin-right: 90px;
     position: relative;
     background-image: linear-gradient(#ECEFF1, #CFD8DC);
-    /* background: #fff; */
-    /* align-items: center;
-    justify-content: center; */
+    margin-top: 50px;
+    margin-bottom: 130px;
 }
 
 .form-submit {
-    /* background: rgb(54, 33, 173); */
-    background: rgb(243, 161, 38);
+   
+    background: #3621ad;
     color: #fff;
     font-weight: 700;
     font-size: 15px;
@@ -247,10 +218,7 @@ button {
     padding-right: 20px;
 }
 
-/* .form-submit:hover {
-    color: rgb(54, 33, 173);
-    background: rgb(215, 213, 213);
-} */
+
 
 
 #form-control {
@@ -273,14 +241,18 @@ label {
 }
 
 @media screen and (max-width: 780px) {
+    .banner{
+        display: block;
+    }
     .article {
         margin-left: 20px;
-        margin-right: 20px;
+        margin-right: 0px;
+        padding-top: 25px;
     }
     .cost{
         font-size: 30px;
-        
     }
+    
 
     .article h2 {
         line-height: 50px;
@@ -289,8 +261,6 @@ label {
     .phone-button {
         width: 140px;
         border-radius: 10px;
-        /* padding-left: 0;
-    padding-right: 0; */
     }
 
     .get-button {
@@ -300,76 +270,42 @@ label {
 
     #form-control {
         width: 300px;
+        background: #fff;
     }
 
     .article h1 {
         font-size: 30px;
         color: white;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        margin-left: 0;
-        padding-top: 40px;
     }
 
     .article h2 {
         font-size: 27px;
-        margin-left: 0;
-        margin-top: 20px;
     }
-    Col{
-        padding-left: 0px !important;
-        padding-right: 0px !important;
-    }
-
-    .banner {
-        padding: 0 !important;
-    }
-
+    
     .banner-button {
-        margin-left: 0;
-        margin-right: 0;
         font-size: 10px;
-
     }
 
     .article h5 {
-        margin-bottom: 0px;
-        margin-left: 0;
+        
         font-size: 18px;
-        margin-top: 20px;
-
     }
 
     .article h4 {
-        font-size: 15px;
-        margin-top: 8px;
-        margin-bottom: 8px;
-        margin-left: 0;
+        font-size: 15px; 
     }
 
     .banner-form {
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-bottom: 60px;
-        margin-top: -70px;
         width: 330px;
+        margin-right: 0px;
+        margin-left: 15px;
         display: inline-block;
         align-items: center;
         justify-content: center;
     }
 
-    .banner-box {
-        padding-left: 0;
-        padding-right: 0;
-
-    }
-
     .million {
         font-size: 20px;
-
     }
 }
 
-/* @media (max-width: 450px) {
-
-} */

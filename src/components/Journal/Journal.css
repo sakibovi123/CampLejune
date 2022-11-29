@@ -5,8 +5,9 @@
     padding-bottom: 20px;
     }
     .journal img{
-        padding-left: 50px;
-        padding-right: 50px;
+      padding-left: 50px;
+      padding-right: 50px;
+      width: 220px;
     }
     /* style swiper */
     .swiper {
@@ -34,7 +35,7 @@
     
       @media (max-width: 780px){
         .journal img{
-            width: 50%;
+          width: 150px;
             margin-bottom: 20px;
         }
       }
