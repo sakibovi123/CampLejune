@@ -26,7 +26,8 @@ const Banner = () => {
         "camp_lj": e.target.camp_lj.value,
         "representation": e.target.representation.value,
         "injury_type_list": e.target.injury_type_list.value,
-        "lp_action": "test"
+        "lp_action": "test",
+        "comment": e.target.comment.value,
       })
     }).then(response => response.json())
         .then(data => console.log(data))
@@ -45,7 +46,8 @@ const Banner = () => {
         "camp_lj": e.target.camp_lj.value,
         "representation": e.target.representation.value,
         "injury_type_list": e.target.injury_type_list.value,
-        "lp_action": "test"
+        "lp_action": "test",
+        "comment": e.target.comment.value,
       })
     }).then(response2 => response2.json())
         .then(data2 => console.log(data2))
@@ -113,7 +115,7 @@ const Banner = () => {
                 <form onSubmit={sendDataToLeadProsper}>
                   <label>
                     Did you or a loved one serve, live, or work at Camp Lejeune for at least 30 days between 1953 and 1987?
-                    <select name="camp_lj" id="">
+                    <select name="camp_lj" id="" className="form-control">
                       <option value="" selected className="form-control">Please Select...</option>
                       <option value="Yes">Yes</option>
                       <option value="No">No</option>
@@ -199,6 +201,9 @@ const Banner = () => {
                       <option value="Other Inury">Other Inury</option>
                     </select>
                   </label>
+
+                  <label>Briefly describe what happened</label>
+                  <textarea name="comment" id="" cols="20" rows="5" className="form-control"></textarea>
 
                   <button className="form-submit ">Submit</button>
 
