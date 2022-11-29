@@ -1,5 +1,6 @@
 .testimonials{
     background: rgb(228, 227, 227);
+    margin-bottom: 60px;
 }
 .gpt3__cta {
     display: flex;
@@ -10,7 +11,7 @@
     padding: 2rem;
     /* margin: 4rem; */
 
-    background: rgb(54, 33, 173);
+    background: #0F3460;
 }
 
 .gpt3__cta-content {
@@ -45,7 +46,7 @@
 }
 
 .gpt3__cta-btn button {
-    background: linear-gradient(rgba(124, 119, 119, 0.7),rgba(58, 53, 53, 0.7));
+    background: #0E5E6F;
     color: #fff;
     font-family: var(--font-family);
     font-weight: 700;

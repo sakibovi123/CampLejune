@@ -19,7 +19,7 @@
 
 .card-mute {
   padding: 40px;
-  background: rgb(245, 244, 244);
+  background: rgb(250, 250, 250);
   margin-bottom: 10px;
 }
 
@@ -28,7 +28,7 @@
 }
 .get-buttn button {
   color: #fff;
-  background: rgb(54, 33, 173);
+  background: #0E5E6F;
 }
 
 .get-buttn button i {

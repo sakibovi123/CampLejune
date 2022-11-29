@@ -1,5 +1,5 @@
 .footer {
-    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("http://andreeabunget.co.uk/Img/footer.jpg");
+    background: linear-gradient(#285430 ,#285430 ), url("http://andreeabunget.co.uk/Img/footer.jpg");
     background-size: cover;
     padding-left: 90px;
     padding-right: 90px;
@@ -28,7 +28,7 @@
     font-weight: bold;
 }
 .second1 a:hover{
-    color: rgb(54, 33, 173);
+    color: #0F3460;
 }
 
 .second2 {
@@ -81,7 +81,7 @@
     .second a:hover, .second2 a:hover {
         color: #fff;
         transition: 0.2s;
-        text-shadow: 1px 1px 20px rgb(54, 33, 173);
+        text-shadow: 2px 2px 20px #0F3460;
         text-decoration: none
 
     }

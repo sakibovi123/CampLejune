@@ -19,7 +19,7 @@
 }
 
 .get-buton button {
-    background: rgb(54, 33, 173);
+    background: #0E5E6F;
     color: #fff;
     padding-left: 30px;
     padding-right: 30px;
@@ -84,7 +84,7 @@
     .card-blog{
         margin-bottom: 150px;
         padding-left: 0;
-        width: 300px;
+        width: 280px;
     }
     .blog-box{
         text-align: center;

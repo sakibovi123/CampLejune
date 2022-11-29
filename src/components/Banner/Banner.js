@@ -6,6 +6,30 @@ import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
   const navigate = useNavigate()
+  const [error, setError] = useState({
+    phone: ''
+  });
+  // const sendDataToLeadProsper = (e) => {
+  //   e.preventDefault();
+
+  //   if (phone.length < 10) {
+  //     setError((state) => ({
+  //       ...state,
+  //       name: 'Too short'
+  //     }));
+  //     return;
+  //   } else {
+  //     setError((state) => ({
+  //       ...state,
+  //       phone: ''
+  //     }));
+  //   };
+  //   showData();
+
+  // }
+
+
+
 
   let sendDataToLeadProsper = async (e) => {
     e.preventDefault()
@@ -90,7 +114,7 @@ const Banner = () => {
                 <h5><i class="fa-regular fa-circle-check"></i> <span>Get Your Medical Bills
                   Paid.</span>	
                 </h5>
-                <h5><i class="fa-sharp fa-solid fa-scroll"></i> <span>Complete the<span className='cost'>no-cost</span>  claim review form.</span>	
+                <h5><i class="fa-sharp fa-solid fa-scroll"></i> <span>Complete the<span className='cost'> no-cost</span>  claim review form.</span>	
                 </h5>
                 <h5><i class="fa-solid fa-heart-pulse"></i> <span>Free Enrollment.</span>	
                 </h5>
@@ -125,16 +149,16 @@ const Banner = () => {
                   <br />
                  
                   <label htmlFor="first_name">First Name</label><br />
-                  <input className="form-control" type="text" name="first_name" placeholder="Enter First Name..." required/>
+                  <input className="form-control" type="text" name="first_name"  required/>
 
                   <label htmlFor="first_name">Last Name</label><br />
-                  <input className="form-control" type="text" name="last_name" placeholder="Enter Last Name..." required/>
+                  <input className="form-control" type="text" name="last_name"  required/>
 
                   <label htmlFor="phone">Phone</label><br />
-                  <input className="form-control" type="number" name="phone" placeholder="Enter Phone..." required/>
+                  <input className="form-control" type="number" name="phone"  required/>
 
                   <label htmlFor="email">Email</label><br />
-                  <input className="form-control" type="email" name="email" placeholder="Enter Email..." required/><br />
+                  <input className="form-control" type="email" name="email"  required/><br />
 
                   
 
@@ -142,7 +166,7 @@ const Banner = () => {
                     Do you already have an attorney representing you for this claim?
                     <div className='radio'>
                       <select name="representation" id="" className="form-control" required>
-                        <option value="" selected>Do you already have an attorney?</option>
+                        <option value="" selected></option>
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
                       </select>
