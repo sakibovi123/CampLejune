@@ -66,7 +66,7 @@ const Banner = () => {
           .then(data2 => console.log(data2))
           .catch(error2 => console.log(error2))
       // console.log()
-      // navigate("/thanks")
+      navigate("/thanks")
     }
   }
   function pushData() {
