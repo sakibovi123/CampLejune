@@ -66,6 +66,27 @@ const Banner = () => {
           .then(data2 => console.log(data2))
           .catch(error2 => console.log(error2))
       // console.log()
+
+      let leadSubmit = document.getElementById("form-submit")
+      let data = {
+        "first_name": e.target.first_name.value,
+        "last_name": e.target.last_name.value,
+        "phone": e.target.phone.value,
+        "email": e.target.email.value,
+      }
+      if( Object.keys(data).length > 0){
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "lead_submitted",
+          "data": data,
+        })
+        console.log("Form Data Pushed!")
+      }
+      else{
+        toast.warning("Input fields can't be empty", {
+          position: toast.POSITION.TOP_CENTER
+        })
+      }
       navigate("/thanks")
     }
   }
@@ -79,24 +100,31 @@ const Banner = () => {
     console.log("clicked")
   }
 
-  function pushLead(){
-    window.dataLayer = window.dataLayer || [];
-    let leadSubmit = document.getElementById("form-submit")
-    window.dataLayer.push({
-      event: "lead_submitted",
-    })
-    console.log("pushLead")
-  }
+  // function pushLead(e){
+  //
+  //   if( data.length > 0 ) {
+  //
+  //     console.log("pushLead")
+  //     console.log(data.length)
+  //   }
+  //   else{
+  //     toast.warning("Input values can't be empty", {
+  //       position: toast.POSITION.TOP_CENTER,
+  //     })
+  //   }
+  //
+  // }
 
-  function pushReview() {
+  function pushReview(e) {
     window.dataLayer = window.dataLayer || [];
     let call = document.getElementById("call")
+      window.dataLayer.push({
+        event: "review_clicked"
+      })
+      console.log("clicked")
+    }
 
-    window.dataLayer.push({
-      event: "review_clicked"
-    })
-    console.log("clicked")
-  }
+
 
   return (
     <div >
@@ -224,7 +252,7 @@ const Banner = () => {
                   <br />
                   <label>Briefly describe what happened</label>
                   <textarea className="form-control" name="comment" id="" cols="30" rows="2" required></textarea>
-                  <button id='form-submit' className=" form-submit form-control " onClick={pushLead}>Start My free consultation</button>
+                  <button id='form-submit' className=" form-submit form-control">Start My free consultation</button>
                 </form>
               </div>
             </div>
