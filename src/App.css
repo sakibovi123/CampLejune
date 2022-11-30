@@ -1,20 +1,12 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Noto Serif', serif;
-}
 
-/* html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 75px;
-} */
 
-body{
+
+
+/* body{
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-}
+} */
 
 .App {
   text-align: center;

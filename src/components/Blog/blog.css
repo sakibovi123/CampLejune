@@ -95,6 +95,9 @@
     .get-buton{
         margin-top: -90px;
     }
+    .get-buton button{
+        font-size: 20px;
+    }
     .content{
         transform: translateY(-200px);
     }

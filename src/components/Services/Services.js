@@ -7,7 +7,7 @@ import service4 from '../../assets/box-4.png';
 
 const Services = () => {
     return (
-        <div className='container'>
+        <div className='services'>
             <div class="card-group">
                 <div class="card">
                     <img src={service1} class="rounded mx-auto d-block" alt="..." />

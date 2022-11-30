@@ -7,6 +7,10 @@
     text-align: center;
     justify-content: center;
 }
+.services{
+    padding-left: 150px;
+    padding-right: 150px;
+}
 
 .card{
     padding-top: 60px;
@@ -26,12 +30,16 @@
     font-weight: 700;
 }
 
-@media (max-width: 780px){
+@media screen and (max-width: 780px) {
     .card-group{
         margin-top: -50px;
     }
     .card{
         align-items: center;
         justify-content: center;
+    }
+    .services{
+        padding-right: 15px;
+        padding-left: 15px;
     }
 }

@@ -96,8 +96,11 @@
 
 
 
-@media (max-width: 780px) {
+@media screen and (max-width: 780px) {
   .get-buttn {
     margin-top: 10px;
+  }
+  .get-buttn button {
+    font-size: 18px;
   }
 }

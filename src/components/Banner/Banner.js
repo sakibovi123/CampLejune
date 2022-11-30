@@ -153,7 +153,7 @@ const Banner = () => {
                   <br />
                   <label>
                     What injury were you or your loved one diagnosed with?
-                    <select className="form-control" name="injury_type_list" required>
+                    <select className="form-control" id='pinjur' name="injury_type_list" required>
                     <option value="Please select">Please select...</option>
                       <option value="Aplastic anemia">Aplastic anemia</option>
                       <option value="Appendix cancer">Appendix cancer</option>

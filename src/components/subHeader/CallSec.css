@@ -74,11 +74,13 @@ animation-timing-function: linear;
   font-weight: 700;
 }
 
-@media (max-width: 780px) {
+@media screen and (max-width: 780px) {
   .subheader{
       font-size: 14px;
       padding-top: 10px;
       padding-bottom: 10px;
+      padding-left: 0px;
+      padding-right: 0px;
   }
   .subheader a span{
       font-size: 18px;

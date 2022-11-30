@@ -19,7 +19,7 @@ font-weight: 700;
     color: rgb(54, 33, 173);
     font-weight: 600;
 }
-@media (max-width: 780px){
+@media screen and (max-width: 780px) {
     .privacy{
         margin-left: 20px;
         margin-right: 20px;

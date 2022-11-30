@@ -33,7 +33,7 @@
       /* align-items: center; */
     }
   
-    @media (max-width: 780px){
+    @media screen and (max-width: 780px) {
       .journal img{
         width: 150px;
           margin-bottom: 20px;

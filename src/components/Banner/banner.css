@@ -1,11 +1,11 @@
 .banner {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../assets/camp-lejeune.jpg");
-    background-position: center;
+    /* background-position: center; */
     background-size: cover;
     height: 100%;
     background-repeat: no-repeat;
     display: flex;
-    place-items: center;
+    /* place-items: center; */
     position: relative;
 }
 
@@ -13,6 +13,7 @@
 .article {
     margin-left: 90px;
     margin-right: 60px;
+    padding-top: 50px;
 }
 
 .article h1 {
@@ -86,10 +87,6 @@
 }
 
 .banner-form label input {
-    margin-left: 10px;
-}
-
-.banner-form label select {
     margin-left: 10px;
 }
 
@@ -179,7 +176,9 @@ button {
     background: linear-gradient(90deg, #64aebe, #0E5E6F);
     color: #fff;
 }
-
+#pinjur{
+    margin-right: 30px !important;
+}
 
 .apply {
     background: #3621ad;
@@ -246,19 +245,7 @@ button {
     font-style: italic;
     font-size: 30px;
 }
-input select{
-    
-}
-/* #form-control {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border: 2px solid rgb(236, 233, 233);
-    width: 370px;
-    margin-right: 10px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    border-radius: 8px;
-} */
+
 
 .radio {
     margin-top: 5px;
@@ -287,7 +274,6 @@ label {
         font-size: 30px;
     }
 
-
     .article h2 {
         line-height: 50px;
         font-size: 27px;
@@ -305,11 +291,6 @@ label {
         border-radius: 10px;
         font-size: 15px;
     }
-
-    /* #form-control {
-        width: 300px;
-        background: #fff;
-    } */
 
 
     .article h1 {
@@ -345,3 +326,8 @@ label {
         font-size: 20px;
     }
 }
+
+
+/* @media only screen and (min-width: 689px) and (max-width: 992px) {
+    
+} */

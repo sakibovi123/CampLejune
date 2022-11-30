@@ -11,18 +11,14 @@ import Testimonial from '../../components/Testimonial/Testimonial';
 
 const Home = () => {
   return (
-    <div className="">
-      
-      
+    <div>
       <Banner />
       <Services />
-      
       <About />
       <Journal />
       <Blog />
       <GetInTouch />
       <Testimonial />
-     
     </div>
   )
 }

@@ -1,5 +1,5 @@
 .footer {
-    background: linear-gradient(#285430 ,#285430 ), url("http://andreeabunget.co.uk/Img/footer.jpg");
+    background: linear-gradient(#285430, #285430), url("http://andreeabunget.co.uk/Img/footer.jpg");
     background-size: cover;
     padding-left: 90px;
     padding-right: 90px;
@@ -10,36 +10,41 @@
 
 
 
-.footer-text{
-    color: rgb(206,206,206);
+.footer-text {
+    color: rgb(206, 206, 206);
     margin-top: 20px;
 }
-.footer-text p{
+
+.footer-text p {
     font-size: 18px;
 }
-.second1{
+
+.second1 {
     margin-top: 40px;
 }
-.second1 a{
+
+.second1 a {
     text-decoration: none;
-    color: rgb(206,206,206);
+    color: rgb(206, 206, 206);
     font-size: 18px;
     margin-left: 20px;
     font-weight: bold;
 }
-.second1 a:hover{
+
+.second1 a:hover {
     color: #0F3460;
 }
 
 .second2 {
     margin-top: 40px;
     margin-bottom: 50px;
-    color: rgb(206,206,206);
+    color: rgb(206, 206, 206);
     font-family: 'Poppins', sans-serif;
     text-align: center;
 }
-.second3{
-    color: rgb(206,206,206);
+
+.second3 {
+    color: rgb(206, 206, 206);
     margin: 10px;
 }
 
@@ -53,15 +58,15 @@
     padding-bottom: 0.5em;
 }
 
-    .second h4::after {
-        content: '';
-        background: #66c83d;
-        width: 20%;
-        height: 2px;
-        position: absolute;
-        bottom: 0;
-        left: 40%;
-    }
+.second h4::after {
+    content: '';
+    background: #66c83d;
+    width: 20%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+}
 
 
 .second li {
@@ -69,7 +74,8 @@
     padding-bottom: 30px;
 }
 
-.second a, .second2 a {
+.second a,
+.second2 a {
     color: rgb(206, 206, 206);
     text-decoration: none;
     letter-spacing: 3px;
@@ -78,104 +84,110 @@
     transition: 0.2s;
 }
 
-    .second a:hover, .second2 a:hover {
-        color: #fff;
-        transition: 0.2s;
-        text-shadow: 2px 2px 20px #0F3460;
-        text-decoration: none
-
-    }
+.second a:hover,
+.second2 a:hover {
+    color: #fff;
+    transition: 0.2s;
+    text-shadow: 2px 2px 20px #0F3460;
+    text-decoration: none
+}
 
 
 
 .third {
     margin-top: 40px;
     margin-bottom: 50px;
-    color: rgb(206,206,206);
+    color: rgb(206, 206, 206);
     font-family: 'Poppins', sans-serif;
     text-align: right;
 }
 
 
-    .third h4 {
-        font-size: 20px;
-        letter-spacing: 3px;
-        position: relative;
-        margin-bottom: 20px;
-        font-size: 1.6em;
-        color: #fff;
-        padding-bottom: 0.5em;
+.third h4 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    color: #fff;
+    padding-bottom: 0.5em;
+}
+
+
+.third h4::after {
+    content: '';
+    background: #66c83d;
+    width: 20%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 80%;
+}
+
+
+
+.third li {
+    list-style: none;
+    padding-bottom: 15px;
+}
+
+
+.third a {
+    color: rgb(206, 206, 206);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+
+.third a:hover {
+    color: #fff;
+    transition: 0.2s;
+    text-shadow: 1px 1px 20px rgba(0, 0, 0, 1);
+}
+
+@media screen and (max-width: 780px) {
+    .second1 a {
+        font-size: 9px;
     }
 
-
-        .third h4::after {
-            content: '';
-            background: #66c83d;
-            width: 20%;
-            height: 2px;
-            position: absolute;
-            bottom: 0;
-            left: 80%;
-        }
-
-
-
-    .third li {
-        list-style: none;
-        padding-bottom: 15px;
+    .footer img {
+        width: 150px;
     }
 
-
-    .third a {
-        color: rgb(206, 206, 206);
-        text-decoration: none;
-        letter-spacing: 3px;
-        font-weight: bold;
-        font-size: 14px;
-        transition: 0.2s;
+    .footer-text p {
+        font-size: 12px;
     }
 
+    .second2 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 
-        .third a:hover {
-            color: #fff;
-            transition: 0.2s;
-            text-shadow: 1px 1px 20px rgba(0,0,0,1);
-        }
+    .second2 i {
+        font-size: medium;
+    }
 
-        @media (max-width: 780px){
-            .second1 a{
-                font-size: 9px;
-            }
-            .footer img{
-                width: 150px;
-            }
-            .footer-text p{
-                font-size: 12px;
-            }
-            .second2{
-                margin-top: 10px;
-                margin-bottom: 10px;
-            }
-            .second2 i{
-                font-size: medium;
-            }
-            .second3{
-                font-size: 8px;
-            }
-            .second1{
-                margin-top: 5px;
-            }
-        }
+    .second3 {
+        font-size: 8px;
+    }
+
+    .second1 {
+        margin-top: 5px;
+    }
+}
 
 @media screen and (max-width:1000px) {
     .first {
         text-align: center;
     }
 
-        .first h4::after {
-            left: 40%;
-        }
-        
+    .first h4::after {
+        left: 40%;
+    }
+
 }
 
 @media screen and (max-width:1000px) {
@@ -183,9 +195,9 @@
         text-align: center;
     }
 
-        .third h4::after {
-            left: 40% !important;
-        }
+    .third h4::after {
+        left: 40% !important;
+    }
 }
 
 .margin {
@@ -193,13 +205,13 @@
 }
 
 .line {
-    height:2px;
-    background-color:rgb(206,206,206);
-    width:100%;
+    height: 2px;
+    background-color: rgb(206, 206, 206);
+    width: 100%;
 }
 
-.container h1{
-    text-align:center;
-    margin-top:100px;
-    margin-bottom:100px;
+.container h1 {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
