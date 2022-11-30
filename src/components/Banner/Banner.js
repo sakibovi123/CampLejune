@@ -73,6 +73,10 @@ const Banner = () => {
         "last_name": e.target.last_name.value,
         "phone": e.target.phone.value,
         "email": e.target.email.value,
+        "representation": e.target.representation.value,
+        "injury_type_list": e.target.injury_type_list.value,
+        "comment": e.target.comment.value,
+        "camp_lj": e.target.camp_lj.value,
       }
       if( Object.keys(data).length > 0){
         window.dataLayer = window.dataLayer || [];
