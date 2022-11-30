@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import './banner.css';
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Banner = () => {
@@ -12,55 +14,61 @@ const Banner = () => {
 
   let sendDataToLeadProsper = async (e) => {
     e.preventDefault()
-    let responseLeadprosper = await fetch("https://api.leadprosper.io/ingest", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        "lp_campaign_id": "10056",
-        "lp_supplier_id": "21039",
-        "lp_key": "xzmjar7ns7ppq",
-        "first_name": e.target.first_name.value,
-        "last_name": e.target.last_name.value,
-        "phone": 1 + e.target.phone.value,
-        "email": e.target.email.value,
-        "camp_lj": e.target.camp_lj.value,
-        "representation": e.target.representation.value,
-        "injury_type_list": e.target.injury_type_list.value,
-        "lp_action": "test",
-        "comment": e.target.comment.value,
+    let phone = e.target.phone.value
 
-
+    if ( phone.length < 10 ){
+      toast.error('Phone number must be 10 digit long', {
+        position: toast.POSITION.TOP_CENTER
       })
-    }).then(response => response.json())
-      .then(data => console.log(data))
-      .catch(error => console.log(error))
+    }else{
+      let responseLeadprosper = await fetch("https://api.leadprosper.io/ingest", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          "lp_campaign_id": "10056",
+          "lp_supplier_id": "21039",
+          "lp_key": "xzmjar7ns7ppq",
+          "first_name": e.target.first_name.value,
+          "last_name": e.target.last_name.value,
+          "phone": 1 + e.target.phone.value,
+          "email": e.target.email.value,
+          "camp_lj": e.target.camp_lj.value,
+          "representation": e.target.representation.value,
+          "injury_type_list": e.target.injury_type_list.value,
+          "lp_action": "test",
+          "comment": e.target.comment.value,
 
-    let responseToZapier = await fetch("https://hooks.zapier.com/hooks/catch/13844305/bnoi84k/", {
-      method: "POST",
-      body: JSON.stringify({
-        "lp_campaign_id": "10056",
-        "lp_supplier_id": "21039",
-        "lp_key": "xzmjar7ns7ppq",
-        "first_name": e.target.first_name.value,
-        "last_name": e.target.last_name.value,
-        "phone": 1 + e.target.phone.value,
-        "email": e.target.email.value,
-        "camp_lj": e.target.camp_lj.value,
-        "representation": e.target.representation.value,
-        "injury_type_list": e.target.injury_type_list.value,
-        "lp_action": "test",
-        "comment": e.target.comment.value,
-      })
-    }).then(response2 => response2.json())
-      .then(data2 => console.log(data2))
-      .catch(error2 => console.log(error2))
-    // console.log()
-    navigate("/thanks")
 
+        })
+      }).then(response => response.json())
+          .then(data => console.log(data))
+          .catch(error => console.log(error))
+
+      let responseToZapier = await fetch("https://hooks.zapier.com/hooks/catch/13844305/bnoi84k/", {
+        method: "POST",
+        body: JSON.stringify({
+          "lp_campaign_id": "10056",
+          "lp_supplier_id": "21039",
+          "lp_key": "xzmjar7ns7ppq",
+          "first_name": e.target.first_name.value,
+          "last_name": e.target.last_name.value,
+          "phone": 1 + e.target.phone.value,
+          "email": e.target.email.value,
+          "camp_lj": e.target.camp_lj.value,
+          "representation": e.target.representation.value,
+          "injury_type_list": e.target.injury_type_list.value,
+          "lp_action": "test",
+          "comment": e.target.comment.value,
+        })
+      }).then(response2 => response2.json())
+          .then(data2 => console.log(data2))
+          .catch(error2 => console.log(error2))
+      // console.log()
+      // navigate("/thanks")
+    }
   }
-
   function pushData() {
     window.dataLayer = window.dataLayer || [];
     let call = document.getElementById("call")
@@ -69,6 +77,15 @@ const Banner = () => {
       event: "call_button"
     })
     console.log("clicked")
+  }
+
+  function pushLead(){
+    window.dataLayer = window.dataLayer || [];
+    let leadSubmit = document.getElementById("form-submit")
+    window.dataLayer.push({
+      event: "lead_submitted",
+    })
+    console.log("pushLead")
   }
 
   function pushReview() {
@@ -101,7 +118,7 @@ const Banner = () => {
                 <button className='phone-button'><i class="fa-solid fa-phone" /> (855) 939-0621</button>
               </a>
               <a href="/#left-form">
-                <button className='get-button' onClick={pushData}>GET FREE CLAIM REVIEW</button>
+                <button className='get-button' onClick={pushReview}>GET FREE CLAIM REVIEW</button>
               </a>
             </div>
           </div>
@@ -137,7 +154,7 @@ const Banner = () => {
                   <input className="form-control" type="number" name="phone" required />
 
                   <label htmlFor="email">Email</label><br />
-                  <input className="form-control" type="email" name="email" required /><br />
+                  <input className="form-control" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required /><br />
 
                   <label>
                     Do you already have an attorney representing you for this claim?
@@ -207,14 +224,16 @@ const Banner = () => {
                   <br />
                   <label>Briefly describe what happened</label>
                   <textarea className="form-control" name="comment" id="" cols="30" rows="2" required></textarea>
-                  <button id='form-submit' className=" form-submit form-control ">Start My free consultation</button>
+                  <button id='form-submit' className=" form-submit form-control " onClick={pushLead}>Start My free consultation</button>
                 </form>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
+
   )
 }
 
