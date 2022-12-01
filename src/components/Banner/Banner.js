@@ -40,11 +40,12 @@ const Banner = () => {
           "injury_type_list": e.target.injury_type_list.value,
           "lp_action": "test",
           "comment": e.target.comment.value,
-
-
         })
       }).then(response => response.json())
           .then(data => console.log(data))
+          .then(t => toast.success("Loading....", {
+            position: toast.POSITION.TOP_CENTER
+          }))
           .catch(error => console.log(error))
 
       let responseToZapier = await fetch("https://hooks.zapier.com/hooks/catch/13844305/bnoi84k/", {
