@@ -6,7 +6,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Banner = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+
   let sendDataToLeadProsper = async (e) => {
     e.preventDefault()
     let phone = e.target.phone.value
@@ -22,6 +24,7 @@ const Banner = () => {
       })
     }
     else{
+      setLoading(true);
       let responseLeadprosper = await fetch("https://api.leadprosper.io/ingest", {
         method: "POST",
         headers: {
@@ -44,7 +47,11 @@ const Banner = () => {
 
         })
       }).then(response => response.json())
-          .then(data => console.log(data))
+      .then(data => {
+        console.log(data);
+        setLoading(false)
+        
+      })
           .catch(error => console.log(error))
 
       let responseToZapier = await fetch("https://hooks.zapier.com/hooks/catch/13844305/bnoi84k/", {
@@ -64,7 +71,12 @@ const Banner = () => {
           "comment": e.target.comment.value,
         })
       }).then(response2 => response2.json())
-          .then(data2 => console.log(data2))
+      .then(data2 => {
+        console.log(data2);
+        setLoading(false)
+        navigate("/thanks");
+        
+      })
           .catch(error2 => console.log(error2))
       // console.log()
 
@@ -257,7 +269,13 @@ const Banner = () => {
                   <br />
                   <label>Briefly describe what happened</label>
                   <textarea className="form-control" name="comment" id="" cols="30" rows="2" required></textarea>
-                  <button id='form-submit' className=" form-submit form-control">Start My free consultation</button>
+                  {!loading && (
+                <button id='form-submit' className=" form-submit form-control " >Start My free consultation </button>
+              )}
+          {loading && (
+            <button id='form-submit' className=" form-submit form-control " disabled> <i className='fas fa-spinner fa-spin'></i>{" "} Start My free consultation... </button>
+          )}
+                  {/* <button id='form-submit' className=" form-submit form-control">Start My free consultation</button> */}
                 </form>
               </div>
             </div>
