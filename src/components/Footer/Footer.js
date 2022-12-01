@@ -63,8 +63,8 @@ const Footer = () => {
                     <a href="/terms-condition" onClick={pushData}>Terms & Condition</a>
                 </div>
                 <div class="second2">
-                    <a href="" target="_blank" onClick={pushFacebook}> <i class="fab fa-facebook fa-2x margin"></i></a>
-                    {/* <a href="" target="_blank" onClick={pushInsta}> <i class="fab instagram fa-2x margin"></i></a> */}
+                    <a href="https://www.facebook.com/CamplejeuneU.S" target="_blank" onClick={pushFacebook}> <i class="fab fa-facebook fa-2x margin"></i></a>
+                    
                     <a href="" target="_blank" onClick={pushLinkedIn}> <i class="fab fa-linkedin fa-2x margin"></i></a>
                     <a href="" target="_blank" onClick={pushYoutube}><i class="fab fa-youtube fa-2x margin" ></i></a>
                 </div>
