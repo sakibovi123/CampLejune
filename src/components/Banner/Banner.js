@@ -106,7 +106,43 @@ const Banner = () => {
       }
       navigate("/thanks")
     }
+
+
+// web -> sheets zap
+let responseToZapierSheets = await fetch("https://hooks.zapier.com/hooks/catch/13844305/bn4acix/", {
+  method: "POST",
+  body: JSON.stringify({
+    "lp_campaign_id": "10056",
+    "lp_supplier_id": "21039",
+    "lp_key": "xzmjar7ns7ppq",
+    "first_name": e.target.first_name.value,
+    "last_name": e.target.last_name.value,
+    "phone": 1 + e.target.phone.value,
+    "email": e.target.email.value,
+    "camp_lj": e.target.camp_lj.value,
+    "representation": e.target.representation.value,
+    "injury_type_list": e.target.injury_type_list.value,
+    "lp_action": "test",
+    "comment": e.target.comment.value,
+  })
+}).then(response3 => response3.json())
+.then(data3 => {
+  console.log(data3);
+  setLoading(false)
+  navigate("/thanks");
+  
+})
+.catch(error2 => console.log(error2))
+
+
   }
+
+
+
+
+
+
+  
   function pushData() {
     window.dataLayer = window.dataLayer || [];
     let call = document.getElementById("call")
