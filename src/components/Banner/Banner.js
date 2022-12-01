@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Col, Row } from 'react-bootstrap';
 import './banner.css';
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
@@ -8,10 +7,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Banner = () => {
   const navigate = useNavigate()
-  const [error, setError] = useState({
-    phone: ''
-  });
-
   let sendDataToLeadProsper = async (e) => {
     e.preventDefault()
     let phone = e.target.phone.value
@@ -20,7 +15,13 @@ const Banner = () => {
       toast.error('Phone number must be 10 digit long', {
         position: toast.POSITION.TOP_CENTER
       })
-    }else{
+    }
+    else if( phone.length > 10 ) {
+      toast.error("Phone number can't be longer than 10 digit", {
+        position: toast.POSITION.TOP_CENTER
+      })
+    }
+    else{
       let responseLeadprosper = await fetch("https://api.leadprosper.io/ingest", {
         method: "POST",
         headers: {
