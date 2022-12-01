@@ -8,22 +8,31 @@ import 'react-toastify/dist/ReactToastify.css';
 const Banner = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
+  const [perror, setPerror] = useState('');
+
 
   let sendDataToLeadProsper = async (e) => {
     e.preventDefault()
     let phone = e.target.phone.value
 
-    if ( phone.length < 10 ){
-      toast.error('Phone number must be 10 digit long', {
-        position: toast.POSITION.TOP_CENTER
-      })
-    }
-    else if( phone.length > 10 ) {
-      toast.error("Phone number can't be longer than 10 digit", {
-        position: toast.POSITION.TOP_CENTER
-      })
+    // if ( phone.length < 10 ){
+    //   toast.error('Phone number must be 10 digit long', {
+    //     position: toast.POSITION.TOP_CENTER
+    //   })
+    // }
+    // else if( phone.length > 10 ) {
+    //   toast.error("Phone number can't be longer than 10 digit", {
+    //     position: toast.POSITION.TOP_CENTER
+    //   })
+    // }
+
+
+    if ((phone.length < 10) || (phone.length > 10)) {
+      setPerror('Phone number should contain 10 character')
+      return;
     }
     else{
+      setPerror('');
       setLoading(true);
       let responseLeadprosper = await fetch("https://api.leadprosper.io/ingest", {
         method: "POST",
@@ -233,6 +242,7 @@ let responseToZapierSheets = await fetch("https://hooks.zapier.com/hooks/catch/1
 
                   <label htmlFor="phone">Phone</label><br />
                   <input className="form-control" type="number" name="phone" required />
+                  <p className='text-danger'>{perror}</p>
 
                   <label htmlFor="email">Email</label><br />
                   <input className="form-control" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required /><br />
