@@ -6,47 +6,60 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Banner = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const [perror, setPerror] = useState('');
+
+
   let sendDataToLeadProsper = async (e) => {
     e.preventDefault()
     let phone = e.target.phone.value
+    let camp_lj = e.target.camp_lj.value
+    let representation = e.target.representation.value
 
-    if ( phone.length < 10 ){
-      toast.error('Phone number must be 10 digit long', {
-        position: toast.POSITION.TOP_CENTER
-      })
-    }
-    else if( phone.length > 10 ) {
-      toast.error("Phone number can't be longer than 10 digit", {
-        position: toast.POSITION.TOP_CENTER
-      })
+
+    if ((phone.length < 10) || (phone.length > 10)) {
+      setPerror('Phone number should contain 10 character')
+      return;
     }
     else{
-      let responseLeadprosper = await fetch("https://api.leadprosper.io/ingest", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          "lp_campaign_id": "10056",
-          "lp_supplier_id": "21039",
-          "lp_key": "xzmjar7ns7ppq",
-          "first_name": e.target.first_name.value,
-          "last_name": e.target.last_name.value,
-          "phone": 1 + e.target.phone.value,
-          "email": e.target.email.value,
-          "camp_lj": e.target.camp_lj.value,
-          "representation": e.target.representation.value,
-          "injury_type_list": e.target.injury_type_list.value,
-          "lp_action": "test",
-          "comment": e.target.comment.value,
-        })
-      }).then(response => response.json())
-          .then(data => console.log(data))
-          .then(t => toast.success("Loading....", {
-            position: toast.POSITION.TOP_CENTER
-          }))
-          .catch(error => console.log(error))
+      setPerror('');
+      setLoading(true);
+      // let responseLeadprosper = await fetch("https://api.leadprosper.io/ingest", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json"
+      //   },
+      //   body: JSON.stringify({
+      //     "lp_campaign_id": "10056",
+      //     "lp_supplier_id": "21039",
+      //     "lp_key": "xzmjar7ns7ppq",
+      //     "first_name": e.target.first_name.value,
+      //     "last_name": e.target.last_name.value,
+      //     "phone": 1 + e.target.phone.value,
+      //     "email": e.target.email.value,
+      //     "camp_lj": e.target.camp_lj.value,
+      //     "representation": e.target.representation.value,
+      //     "injury_type_list": e.target.injury_type_list.value,
+      //     "lp_action": "test",
+      //     "comment": e.target.comment.value,
+      //   })
+      // }).then(response => response.json())
+      //
+      //     .then(data => console.log(data))
+      //     .then(t => toast.success("Loading....", {
+      //       position: toast.POSITION.TOP_CENTER
+      //     }))
+      //
+      // .then(data => {
+      //   console.log(data);
+      //   setLoading(false)
+      //
+      // })
+      //     .catch(error => console.log(error))
+
+
+    if( camp_lj == "Yes" && representation == "No" ){
 
       let responseToZapier = await fetch("https://hooks.zapier.com/hooks/catch/13844305/bnoi84k/", {
         method: "POST",
@@ -56,7 +69,7 @@ const Banner = () => {
           "lp_key": "xzmjar7ns7ppq",
           "first_name": e.target.first_name.value,
           "last_name": e.target.last_name.value,
-          "phone": 1 + e.target.phone.value,
+          "phone": "+" + 1 + e.target.phone.value,
           "email": e.target.email.value,
           "camp_lj": e.target.camp_lj.value,
           "representation": e.target.representation.value,
@@ -65,15 +78,21 @@ const Banner = () => {
           "comment": e.target.comment.value,
         })
       }).then(response2 => response2.json())
-          .then(data2 => console.log(data2))
-          .catch(error2 => console.log(error2))
-      // console.log()
+          .then(data2 => {
+            console.log(data2);
+            setLoading(false)
+            navigate("/thanks");
 
+          })
+          .catch(error2 => console.log(error2))
+
+
+      // submittinh leads
       let leadSubmit = document.getElementById("form-submit")
       let data = {
         "first_name": e.target.first_name.value,
         "last_name": e.target.last_name.value,
-        "phone": e.target.phone.value,
+        "phone": "+" + 1 + e.target.phone.value,
         "email": e.target.email.value,
         "representation": e.target.representation.value,
         "injury_type_list": e.target.injury_type_list.value,
@@ -93,9 +112,100 @@ const Banner = () => {
           position: toast.POSITION.TOP_CENTER
         })
       }
+      // web -> sheets zap
+      let responseToZapierSheets = await fetch("https://hooks.zapier.com/hooks/catch/13844305/bn4acix/", {
+        method: "POST",
+        body: JSON.stringify({
+          "lp_campaign_id": "10056",
+          "lp_supplier_id": "21039",
+          "lp_key": "xzmjar7ns7ppq",
+          "first_name": e.target.first_name.value,
+          "last_name": e.target.last_name.value,
+          "phone": "+" + 1 + e.target.phone.value,
+          "email": e.target.email.value,
+          "camp_lj": e.target.camp_lj.value,
+          "representation": e.target.representation.value,
+          "injury_type_list": e.target.injury_type_list.value,
+          "lp_action": "test",
+          "comment": e.target.comment.value,
+        })
+      }).then(response3 => response3.json())
+          .then(data3 => {
+            console.log(data3);
+            setLoading(false)
+            navigate("/thanks");
+
+          })
+          .catch(error2 => console.log(error2))
+
+      console.log("YES NO")
+      // navigate("/thanks")
+    }
+    else{
+      // submitting leads
+      let leadSubmit = document.getElementById("form-submit")
+      let data = {
+        "first_name": e.target.first_name.value,
+        "last_name": e.target.last_name.value,
+        "phone": "+" + 1 + e.target.phone.value,
+        "email": e.target.email.value,
+        "representation": e.target.representation.value,
+        "injury_type_list": e.target.injury_type_list.value,
+        "comment": e.target.comment.value,
+        "camp_lj": e.target.camp_lj.value,
+      }
+      if( Object.keys(data).length > 0){
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "lead_submitted",
+          "data": data,
+        })
+        console.log("Form Data Pushed!")
+      }
+      else{
+        toast.warning("Input fields can't be empty", {
+          position: toast.POSITION.TOP_CENTER
+        })
+      }
+      // web -> sheets zap
+      let responseToZapierSheets = await fetch("https://hooks.zapier.com/hooks/catch/13844305/bn4acix/", {
+        method: "POST",
+        body: JSON.stringify({
+          "lp_campaign_id": "10056",
+          "lp_supplier_id": "21039",
+          "lp_key": "xzmjar7ns7ppq",
+          "first_name": e.target.first_name.value,
+          "last_name": e.target.last_name.value,
+          "phone": "+" + 1 + e.target.phone.value,
+          "email": e.target.email.value,
+          "camp_lj": e.target.camp_lj.value,
+          "representation": e.target.representation.value,
+          "injury_type_list": e.target.injury_type_list.value,
+          "lp_action": "test",
+          "comment": e.target.comment.value,
+        })
+      }).then(response3 => response3.json())
+          .then(data3 => {
+            console.log(data3);
+            setLoading(false)
+            navigate("/thanks");
+
+          })
+          .catch(error2 => console.log(error2))
+      console.log("ELSE WORKING FINE")
       navigate("/thanks")
     }
+
+
+
+    }
+
+      // console.log()
+
+
+
   }
+
   function pushData() {
     window.dataLayer = window.dataLayer || [];
     let call = document.getElementById("call")
@@ -106,20 +216,7 @@ const Banner = () => {
     console.log("clicked")
   }
 
-  // function pushLead(e){
-  //
-  //   if( data.length > 0 ) {
-  //
-  //     console.log("pushLead")
-  //     console.log(data.length)
-  //   }
-  //   else{
-  //     toast.warning("Input values can't be empty", {
-  //       position: toast.POSITION.TOP_CENTER,
-  //     })
-  //   }
-  //
-  // }
+
 
   function pushReview(e) {
     window.dataLayer = window.dataLayer || [];
@@ -186,6 +283,7 @@ const Banner = () => {
 
                   <label htmlFor="phone">Phone</label><br />
                   <input className="form-control" type="number" name="phone" required />
+                  <p className='text-danger'>{perror}</p>
 
                   <label htmlFor="email">Email</label><br />
                   <input className="form-control" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required /><br />
@@ -258,7 +356,13 @@ const Banner = () => {
                   <br />
                   <label>Briefly describe what happened</label>
                   <textarea className="form-control" name="comment" id="" cols="30" rows="2" required></textarea>
-                  <button id='form-submit' className=" form-submit form-control">Start My free consultation</button>
+                  {!loading && (
+                <button id='form-submit' className=" form-submit form-control " >Start My free consultation </button>
+              )}
+          {loading && (
+            <button id='form-submit' className=" form-submit form-control " disabled> <i className='fas fa-spinner fa-spin'></i>{" "} Start My free consultation... </button>
+          )}
+                  {/* <button id='form-submit' className=" form-submit form-control">Start My free consultation</button> */}
                 </form>
               </div>
             </div>
