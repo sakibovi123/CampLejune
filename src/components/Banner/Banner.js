@@ -148,7 +148,6 @@ const Banner = () => {
           "camp_lj": e.target.camp_lj.value,
           "representation": e.target.representation.value,
           "injury_type_list": e.target.injury_type_list.value,
-
           "comment": e.target.comment.value,
         })
       }).then(response3 => response3.json())
@@ -162,15 +161,7 @@ const Banner = () => {
       console.log("ELSE WORKING FINE")
       navigate("/thanks")
     }
-
-
-
     }
-
-      // console.log()
-
-
-
   }
 
   function pushData() {
