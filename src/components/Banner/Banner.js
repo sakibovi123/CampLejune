@@ -25,39 +25,6 @@ const Banner = () => {
     else{
       setPerror('');
       setLoading(true);
-      // let responseLeadprosper = await fetch("https://api.leadprosper.io/ingest", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json"
-      //   },
-      //   body: JSON.stringify({
-      //     "lp_campaign_id": "10056",
-      //     "lp_supplier_id": "21039",
-      //     "lp_key": "xzmjar7ns7ppq",
-      //     "first_name": e.target.first_name.value,
-      //     "last_name": e.target.last_name.value,
-      //     "phone": 1 + e.target.phone.value,
-      //     "email": e.target.email.value,
-      //     "camp_lj": e.target.camp_lj.value,
-      //     "representation": e.target.representation.value,
-      //     "injury_type_list": e.target.injury_type_list.value,
-      //     "lp_action": "test",
-      //     "comment": e.target.comment.value,
-      //   })
-      // }).then(response => response.json())
-      //
-      //     .then(data => console.log(data))
-      //     .then(t => toast.success("Loading....", {
-      //       position: toast.POSITION.TOP_CENTER
-      //     }))
-      //
-      // .then(data => {
-      //   console.log(data);
-      //   setLoading(false)
-      //
-      // })
-      //     .catch(error => console.log(error))
-
 
     if( camp_lj == "Yes" && representation == "No" ){
 
@@ -74,7 +41,7 @@ const Banner = () => {
           "camp_lj": e.target.camp_lj.value,
           "representation": e.target.representation.value,
           "injury_type_list": e.target.injury_type_list.value,
-          "lp_action": "test",
+
           "comment": e.target.comment.value,
         })
       }).then(response2 => response2.json())
@@ -126,7 +93,7 @@ const Banner = () => {
           "camp_lj": e.target.camp_lj.value,
           "representation": e.target.representation.value,
           "injury_type_list": e.target.injury_type_list.value,
-          "lp_action": "test",
+
           "comment": e.target.comment.value,
         })
       }).then(response3 => response3.json())
@@ -181,7 +148,7 @@ const Banner = () => {
           "camp_lj": e.target.camp_lj.value,
           "representation": e.target.representation.value,
           "injury_type_list": e.target.injury_type_list.value,
-          "lp_action": "test",
+
           "comment": e.target.comment.value,
         })
       }).then(response3 => response3.json())
