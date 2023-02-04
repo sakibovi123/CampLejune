@@ -14,20 +14,21 @@ const Banner = () => {
   let sendDataToLeadProsper = async (e) => {
     e.preventDefault()
     let phone = e.target.phone.value
-    let camp_lj = e.target.camp_lj.value
-    let representation = e.target.representation.value
+    let state = e.target.state.value
+    let is_loved = e.target.is_loved.value
+    let have_attorney = e.target.have_attorney.value
 
 
-    if ((phone.length < 10) || (phone.length > 10)) {
+    if ((phone.length < 10) || (phone.length > 10) || (state.length < 2) || (state.length > 2)) {
       setPerror('Phone number should contain 10 character')
-      // setSerror('State should be 2 character longer')
+      setSerror('State should be 2 character longer')
       return;
     }
     else {
       setPerror('');
       setLoading(true);
 
-      if (camp_lj == "Yes" && representation == "No") {
+      if (is_loved == "Yes" && have_attorney == "No") {
 
         let responseToZapier = await fetch("https://hooks.zapier.com/hooks/catch/13844305/bnoi84k/", {
           method: "POST",
@@ -39,11 +40,13 @@ const Banner = () => {
             "last_name": e.target.last_name.value,
             "phone": "+" + 1 + e.target.phone.value,
             "email": e.target.email.value,
-            "camp_lj": e.target.camp_lj.value,
-            "representation": e.target.representation.value,
-            "injury_type_list": e.target.injury_type_list.value,
-
-            "comment": e.target.comment.value,
+            "is_loved": e.target.is_loved.value,
+            "have_attorney": e.target.have_attorney.value,
+            "type_of_legal_problem": e.target.type_of_legal_problem.value,
+            "address": e.target.address.value,
+            "city": e.target.city.value,
+            "state": e.target.state.value,
+            "zip_code": e.target.zip_code.value,
           })
         }).then(response2 => response2.json())
           .then(data2 => {
@@ -62,10 +65,13 @@ const Banner = () => {
           "last_name": e.target.last_name.value,
           "phone": "+" + 1 + e.target.phone.value,
           "email": e.target.email.value,
-          "representation": e.target.representation.value,
-          "injury_type_list": e.target.injury_type_list.value,
-          "comment": e.target.comment.value,
-          "camp_lj": e.target.camp_lj.value,
+          "have_attorney": e.target.have_attorney.value,
+          "type_of_legal_problem": e.target.type_of_legal_problem.value,
+          "is_loved": e.target.is_loved.value,
+          "address": e.target.address.value,
+          "city": e.target.city.value,
+          "state": e.target.state.value,
+          "zip_code": e.target.zip_code.value,
         }
         if (Object.keys(data).length > 0) {
           window.dataLayer = window.dataLayer || [];
@@ -91,11 +97,13 @@ const Banner = () => {
             "last_name": e.target.last_name.value,
             "phone": "+" + 1 + e.target.phone.value,
             "email": e.target.email.value,
-            "camp_lj": e.target.camp_lj.value,
-            "representation": e.target.representation.value,
-            "injury_type_list": e.target.injury_type_list.value,
-
-            "comment": e.target.comment.value,
+            "is_loved": e.target.is_loved.value,
+            "have_attorney": e.target.have_attorney.value,
+            "type_of_legal_problem": e.target.type_of_legal_problem.value,
+            "address": e.target.address.value,
+            "city": e.target.city.value,
+            "state": e.target.state.value,
+            "zip_code": e.target.zip_code.value,
           })
         }).then(response3 => response3.json())
           .then(data3 => {
@@ -117,10 +125,13 @@ const Banner = () => {
           "last_name": e.target.last_name.value,
           "phone": "+" + 1 + e.target.phone.value,
           "email": e.target.email.value,
-          "representation": e.target.representation.value,
-          "injury_type_list": e.target.injury_type_list.value,
-          "comment": e.target.comment.value,
-          "camp_lj": e.target.camp_lj.value,
+          "have_attorney": e.target.have_attorney.value,
+          "type_of_legal_problem": e.target.type_of_legal_problem.value,
+          "address": e.target.address.value,
+          "city": e.target.city.value,
+          "state": e.target.state.value,
+          "zip_code": e.target.zip_code.value,
+          "is_loved": e.target.is_loved.value,
         }
         if (Object.keys(data).length > 0) {
           window.dataLayer = window.dataLayer || [];
@@ -146,11 +157,13 @@ const Banner = () => {
             "last_name": e.target.last_name.value,
             "phone": "+" + 1 + e.target.phone.value,
             "email": e.target.email.value,
-            "camp_lj": e.target.camp_lj.value,
-            "representation": e.target.representation.value,
-            "injury_type_list": e.target.injury_type_list.value,
-
-            "comment": e.target.comment.value,
+            "is_loved": e.target.is_loved.value,
+            "have_attorney": e.target.have_attorney.value,
+            "type_of_legal_problem": e.target.type_of_legal_problem.value,
+            "address": e.target.address.value,
+            "city": e.target.city.value,
+            "state": e.target.state.value,
+            "zip_code": e.target.zip_code.value,
           })
         }).then(response3 => response3.json())
           .then(data3 => {
@@ -226,7 +239,7 @@ const Banner = () => {
                   <label>
                     Did you or a loved one serve, live, or work at Camp Lejeune for at least 30 days between 1953 and 1987?
                     <div className='radio'>
-                      <select name="camp_lj" id="cpform" className="form-control" required>
+                      <select name="is_loved" id="cpform" className="form-control" required>
                         <option value="" selected>Please select...</option>
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
@@ -242,7 +255,7 @@ const Banner = () => {
                       <input className="form-control" type="text" name="last_name" placeholder='Last Name' required />
                     </div>
                   </div>
-                  
+
                   <div className='row gx-3 mt-3'>
                     <div className='col'>
                       <input className="form-control" type="number" name="phone" placeholder='Phone' required />
@@ -255,10 +268,10 @@ const Banner = () => {
 
                   <div className='row gx-3'>
                     <div className='col'>
-                      <input className="form-control" type="number" name="address" placeholder='Address' required />
+                      <input className="form-control" type="text" name="address" placeholder='Address' required />
                     </div>
                     <div className='col'>
-                      <input className="form-control" type="text" name="city"  placeholder='City' required />
+                      <input className="form-control" type="text" name="city" placeholder='City' required />
                     </div>
                   </div>
 
@@ -268,14 +281,14 @@ const Banner = () => {
                       <p className='text-danger'>{serror}</p>
                     </div>
                     <div className='col'>
-                      <input className="form-control" type="text" name="zip"  placeholder='Zip' required />
+                      <input className="form-control" type="text" name="zip_code" placeholder='Zip' required />
                     </div>
                   </div>
                   <br />
                   <label>
                     Do you already have an attorney representing you for this claim?
                     <div className='radio'>
-                      <select name="representation" id="" className="form-control" required>
+                      <select name="have_attorney" id="" className="form-control" required>
                         <option value="" selected>Please select...</option>
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
@@ -286,7 +299,7 @@ const Banner = () => {
                   <br />
                   <label>
                     What injury were you or your loved one diagnosed with?
-                    <select className="form-control" id='pinjur' name="injury_type_list" required>
+                    <select className="form-control" id='pinjur' name="type_of_legal_problem" required>
                       <option value="Please select">Please select...</option>
                       <option value="Aplastic anemia">Aplastic anemia</option>
                       <option value="Appendix cancer">Appendix cancer</option>
@@ -338,8 +351,8 @@ const Banner = () => {
                   </label>
                   <br />
                   <br />
-                  <label>Briefly describe what happened</label>
-                  <textarea className="form-control" name="comment" id="" cols="30" rows="2" required></textarea>
+                  {/* <label>Briefly describe what happened</label>
+                  <textarea className="form-control" name="comment" id="" cols="30" rows="2" required></textarea> */}
                   {!loading && (
                     <button id='form-submit' className=" form-submit form-control " >Start My free consultation </button>
                   )}
