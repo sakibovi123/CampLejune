@@ -9,7 +9,7 @@ const Banner = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [perror, setPerror] = useState('');
-
+  const [serror, setSerror] = useState('');
 
   let sendDataToLeadProsper = async (e) => {
     e.preventDefault()
@@ -20,31 +20,32 @@ const Banner = () => {
 
     if ((phone.length < 10) || (phone.length > 10)) {
       setPerror('Phone number should contain 10 character')
+      // setSerror('State should be 2 character longer')
       return;
     }
-    else{
+    else {
       setPerror('');
       setLoading(true);
 
-    if( camp_lj == "Yes" && representation == "No" ){
+      if (camp_lj == "Yes" && representation == "No") {
 
-      let responseToZapier = await fetch("https://hooks.zapier.com/hooks/catch/13844305/bnoi84k/", {
-        method: "POST",
-        body: JSON.stringify({
-          "lp_campaign_id": "10056",
-          "lp_supplier_id": "21039",
-          "lp_key": "xzmjar7ns7ppq",
-          "first_name": e.target.first_name.value,
-          "last_name": e.target.last_name.value,
-          "phone": "+" + 1 + e.target.phone.value,
-          "email": e.target.email.value,
-          "camp_lj": e.target.camp_lj.value,
-          "representation": e.target.representation.value,
-          "injury_type_list": e.target.injury_type_list.value,
+        let responseToZapier = await fetch("https://hooks.zapier.com/hooks/catch/13844305/bnoi84k/", {
+          method: "POST",
+          body: JSON.stringify({
+            "lp_campaign_id": "10056",
+            "lp_supplier_id": "21039",
+            "lp_key": "xzmjar7ns7ppq",
+            "first_name": e.target.first_name.value,
+            "last_name": e.target.last_name.value,
+            "phone": "+" + 1 + e.target.phone.value,
+            "email": e.target.email.value,
+            "camp_lj": e.target.camp_lj.value,
+            "representation": e.target.representation.value,
+            "injury_type_list": e.target.injury_type_list.value,
 
-          "comment": e.target.comment.value,
-        })
-      }).then(response2 => response2.json())
+            "comment": e.target.comment.value,
+          })
+        }).then(response2 => response2.json())
           .then(data2 => {
             console.log(data2);
             setLoading(false)
@@ -54,49 +55,49 @@ const Banner = () => {
           .catch(error2 => console.log(error2))
 
 
-      // submittinh leads
-      let leadSubmit = document.getElementById("form-submit")
-      let data = {
-        "first_name": e.target.first_name.value,
-        "last_name": e.target.last_name.value,
-        "phone": "+" + 1 + e.target.phone.value,
-        "email": e.target.email.value,
-        "representation": e.target.representation.value,
-        "injury_type_list": e.target.injury_type_list.value,
-        "comment": e.target.comment.value,
-        "camp_lj": e.target.camp_lj.value,
-      }
-      if( Object.keys(data).length > 0){
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: "lead_submitted",
-          "data": data,
-        })
-        console.log("Form Data Pushed!")
-      }
-      else{
-        toast.warning("Input fields can't be empty", {
-          position: toast.POSITION.TOP_CENTER
-        })
-      }
-      // web -> sheets zap
-      let responseToZapierSheets = await fetch("https://hooks.zapier.com/hooks/catch/13844305/bn4acix/", {
-        method: "POST",
-        body: JSON.stringify({
-          "lp_campaign_id": "10056",
-          "lp_supplier_id": "21039",
-          "lp_key": "xzmjar7ns7ppq",
+        // submittinh leads
+        let leadSubmit = document.getElementById("form-submit")
+        let data = {
           "first_name": e.target.first_name.value,
           "last_name": e.target.last_name.value,
           "phone": "+" + 1 + e.target.phone.value,
           "email": e.target.email.value,
-          "camp_lj": e.target.camp_lj.value,
           "representation": e.target.representation.value,
           "injury_type_list": e.target.injury_type_list.value,
-
           "comment": e.target.comment.value,
-        })
-      }).then(response3 => response3.json())
+          "camp_lj": e.target.camp_lj.value,
+        }
+        if (Object.keys(data).length > 0) {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: "lead_submitted",
+            "data": data,
+          })
+          console.log("Form Data Pushed!")
+        }
+        else {
+          toast.warning("Input fields can't be empty", {
+            position: toast.POSITION.TOP_CENTER
+          })
+        }
+        // web -> sheets zap
+        let responseToZapierSheets = await fetch("https://hooks.zapier.com/hooks/catch/13844305/bn4acix/", {
+          method: "POST",
+          body: JSON.stringify({
+            "lp_campaign_id": "10056",
+            "lp_supplier_id": "21039",
+            "lp_key": "xzmjar7ns7ppq",
+            "first_name": e.target.first_name.value,
+            "last_name": e.target.last_name.value,
+            "phone": "+" + 1 + e.target.phone.value,
+            "email": e.target.email.value,
+            "camp_lj": e.target.camp_lj.value,
+            "representation": e.target.representation.value,
+            "injury_type_list": e.target.injury_type_list.value,
+
+            "comment": e.target.comment.value,
+          })
+        }).then(response3 => response3.json())
           .then(data3 => {
             console.log(data3);
             setLoading(false)
@@ -105,53 +106,53 @@ const Banner = () => {
           })
           .catch(error2 => console.log(error2))
 
-      console.log("YES NO")
-      // navigate("/thanks")
-    }
-    else{
-      // submitting leads
-      let leadSubmit = document.getElementById("form-submit")
-      let data = {
-        "first_name": e.target.first_name.value,
-        "last_name": e.target.last_name.value,
-        "phone": "+" + 1 + e.target.phone.value,
-        "email": e.target.email.value,
-        "representation": e.target.representation.value,
-        "injury_type_list": e.target.injury_type_list.value,
-        "comment": e.target.comment.value,
-        "camp_lj": e.target.camp_lj.value,
+        console.log("YES NO")
+        // navigate("/thanks")
       }
-      if( Object.keys(data).length > 0){
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: "lead_submitted",
-          "data": data,
-        })
-        console.log("Form Data Pushed!")
-      }
-      else{
-        toast.warning("Input fields can't be empty", {
-          position: toast.POSITION.TOP_CENTER
-        })
-      }
-      // web -> sheets zap
-      let responseToZapierSheets = await fetch("https://hooks.zapier.com/hooks/catch/13844305/bn4acix/", {
-        method: "POST",
-        body: JSON.stringify({
-          "lp_campaign_id": "10056",
-          "lp_supplier_id": "21039",
-          "lp_key": "xzmjar7ns7ppq",
+      else {
+        // submitting leads
+        let leadSubmit = document.getElementById("form-submit")
+        let data = {
           "first_name": e.target.first_name.value,
           "last_name": e.target.last_name.value,
           "phone": "+" + 1 + e.target.phone.value,
           "email": e.target.email.value,
-          "camp_lj": e.target.camp_lj.value,
           "representation": e.target.representation.value,
           "injury_type_list": e.target.injury_type_list.value,
-
           "comment": e.target.comment.value,
-        })
-      }).then(response3 => response3.json())
+          "camp_lj": e.target.camp_lj.value,
+        }
+        if (Object.keys(data).length > 0) {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: "lead_submitted",
+            "data": data,
+          })
+          console.log("Form Data Pushed!")
+        }
+        else {
+          toast.warning("Input fields can't be empty", {
+            position: toast.POSITION.TOP_CENTER
+          })
+        }
+        // web -> sheets zap
+        let responseToZapierSheets = await fetch("https://hooks.zapier.com/hooks/catch/13844305/bn4acix/", {
+          method: "POST",
+          body: JSON.stringify({
+            "lp_campaign_id": "10056",
+            "lp_supplier_id": "21039",
+            "lp_key": "xzmjar7ns7ppq",
+            "first_name": e.target.first_name.value,
+            "last_name": e.target.last_name.value,
+            "phone": "+" + 1 + e.target.phone.value,
+            "email": e.target.email.value,
+            "camp_lj": e.target.camp_lj.value,
+            "representation": e.target.representation.value,
+            "injury_type_list": e.target.injury_type_list.value,
+
+            "comment": e.target.comment.value,
+          })
+        }).then(response3 => response3.json())
           .then(data3 => {
             console.log(data3);
             setLoading(false)
@@ -159,18 +160,11 @@ const Banner = () => {
 
           })
           .catch(error2 => console.log(error2))
-      console.log("ELSE WORKING FINE")
-      navigate("/thanks")
+        console.log("ELSE WORKING FINE")
+        navigate("/thanks")
+      }
     }
-
-
-
-    }
-
-      // console.log()
-
-
-
+    // console.log()
   }
 
   function pushData() {
@@ -188,11 +182,11 @@ const Banner = () => {
   function pushReview(e) {
     window.dataLayer = window.dataLayer || [];
     let call = document.getElementById("call")
-      window.dataLayer.push({
-        event: "review_clicked"
-      })
-      console.log("clicked")
-    }
+    window.dataLayer.push({
+      event: "review_clicked"
+    })
+    console.log("clicked")
+  }
 
 
 
@@ -237,24 +231,47 @@ const Banner = () => {
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
                       </select>
-
                     </div>
                   </label>
                   <br />
+                  <div className='row gx-3 mt-2'>
+                    <div className='col'>
+                      <input className="form-control" type="text" name="first_name" placeholder='First Name' required />
+                    </div>
+                    <div className='col'>
+                      <input className="form-control" type="text" name="last_name" placeholder='Last Name' required />
+                    </div>
+                  </div>
+                  
+                  <div className='row gx-3 mt-3'>
+                    <div className='col'>
+                      <input className="form-control" type="number" name="phone" placeholder='Phone' required />
+                      <p className='text-danger'>{perror}</p>
+                    </div>
+                    <div className='col'>
+                      <input className="form-control" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" placeholder='Email' required />
+                    </div>
+                  </div>
 
-                  <label htmlFor="first_name">First Name</label><br />
-                  <input className="form-control" type="text" name="first_name" required />
+                  <div className='row gx-3'>
+                    <div className='col'>
+                      <input className="form-control" type="number" name="address" placeholder='Address' required />
+                    </div>
+                    <div className='col'>
+                      <input className="form-control" type="text" name="city"  placeholder='City' required />
+                    </div>
+                  </div>
 
-                  <label htmlFor="first_name">Last Name</label><br />
-                  <input className="form-control" type="text" name="last_name" required />
-
-                  <label htmlFor="phone">Phone</label><br />
-                  <input className="form-control" type="number" name="phone" required />
-                  <p className='text-danger'>{perror}</p>
-
-                  <label htmlFor="email">Email</label><br />
-                  <input className="form-control" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required /><br />
-
+                  <div className='row gx-3 mt-3'>
+                    <div className='col'>
+                      <input className="form-control" type="text" name="state" placeholder='State' required />
+                      <p className='text-danger'>{serror}</p>
+                    </div>
+                    <div className='col'>
+                      <input className="form-control" type="text" name="zip"  placeholder='Zip' required />
+                    </div>
+                  </div>
+                  <br />
                   <label>
                     Do you already have an attorney representing you for this claim?
                     <div className='radio'>
