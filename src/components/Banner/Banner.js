@@ -30,15 +30,12 @@ const Banner = () => {
 
       if (is_loved == "Yes" && have_attorney == "No") {
 
-        let responseToZapier = await fetch("https://hooks.zapier.com/hooks/catch/13844305/bnoi84k/", {
+        let responseToZapier = await fetch("https://leadmanager.rayadvertising.com/api/post-legal", {
           method: "POST",
           body: JSON.stringify({
-            "lp_campaign_id": "10056",
-            "lp_supplier_id": "21039",
-            "lp_key": "xzmjar7ns7ppq",
             "first_name": e.target.first_name.value,
             "last_name": e.target.last_name.value,
-            "phone": "+" + 1 + e.target.phone.value,
+            "phone": e.target.phone.value,
             "email": e.target.email.value,
             "is_loved": e.target.is_loved.value,
             "have_attorney": e.target.have_attorney.value,
@@ -63,7 +60,7 @@ const Banner = () => {
         let data = {
           "first_name": e.target.first_name.value,
           "last_name": e.target.last_name.value,
-          "phone": "+" + 1 + e.target.phone.value,
+          "phone": e.target.phone.value,
           "email": e.target.email.value,
           "have_attorney": e.target.have_attorney.value,
           "type_of_legal_problem": e.target.type_of_legal_problem.value,
@@ -87,15 +84,12 @@ const Banner = () => {
           })
         }
         // web -> sheets zap
-        let responseToZapierSheets = await fetch("https://hooks.zapier.com/hooks/catch/13844305/bn4acix/", {
+        let responseToZapierSheets = await fetch("https://hooks.zapier.com/hooks/catch/13844305/3yhu59t/", {
           method: "POST",
           body: JSON.stringify({
-            "lp_campaign_id": "10056",
-            "lp_supplier_id": "21039",
-            "lp_key": "xzmjar7ns7ppq",
             "first_name": e.target.first_name.value,
             "last_name": e.target.last_name.value,
-            "phone": "+" + 1 + e.target.phone.value,
+            "phone": e.target.phone.value,
             "email": e.target.email.value,
             "is_loved": e.target.is_loved.value,
             "have_attorney": e.target.have_attorney.value,
@@ -147,15 +141,12 @@ const Banner = () => {
           })
         }
         // web -> sheets zap
-        let responseToZapierSheets = await fetch("https://hooks.zapier.com/hooks/catch/13844305/bn4acix/", {
+        let responseToZapierSheets = await fetch("https://hooks.zapier.com/hooks/catch/13844305/3yhu59t/", {
           method: "POST",
           body: JSON.stringify({
-            "lp_campaign_id": "10056",
-            "lp_supplier_id": "21039",
-            "lp_key": "xzmjar7ns7ppq",
             "first_name": e.target.first_name.value,
             "last_name": e.target.last_name.value,
-            "phone": "+" + 1 + e.target.phone.value,
+            "phone": e.target.phone.value,
             "email": e.target.email.value,
             "is_loved": e.target.is_loved.value,
             "have_attorney": e.target.have_attorney.value,
@@ -190,8 +181,6 @@ const Banner = () => {
     console.log("clicked")
   }
 
-
-
   function pushReview(e) {
     window.dataLayer = window.dataLayer || [];
     let call = document.getElementById("call")
@@ -200,8 +189,6 @@ const Banner = () => {
     })
     console.log("clicked")
   }
-
-
 
   return (
     <div >
