@@ -253,16 +253,16 @@ const Banner = () => {
                     </div>
                   </div>
 
-                  <div className='row gx-3'>
+                  {/* <div className='row gx-3'>
                     <div className='col'>
                       <input className="form-control" type="text" name="address" placeholder='Address' required />
                     </div>
                     <div className='col'>
                       <input className="form-control" type="text" name="city" placeholder='City' required />
                     </div>
-                  </div>
+                  </div> */}
 
-                  <div className='row gx-3 mt-3'>
+                  {/* <div className='row gx-3 mt-3'>
                     <div className='col'>
                       <input className="form-control" type="text" name="state" placeholder='State' required />
                       <p className='text-danger'>{serror}</p>
@@ -270,7 +270,7 @@ const Banner = () => {
                     <div className='col'>
                       <input className="form-control" type="text" name="zip_code" placeholder='Zip' required />
                     </div>
-                  </div>
+                  </div> */}
                   <br />
                   <label>
                     Do you already have an attorney representing you for this claim?
