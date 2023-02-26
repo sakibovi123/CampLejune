@@ -252,25 +252,6 @@ const Banner = () => {
                       <input className="form-control" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" placeholder='Email' required />
                     </div>
                   </div>
-
-                  {/* <div className='row gx-3'>
-                    <div className='col'>
-                      <input className="form-control" type="text" name="address" placeholder='Address' required />
-                    </div>
-                    <div className='col'>
-                      <input className="form-control" type="text" name="city" placeholder='City' required />
-                    </div>
-                  </div> */}
-
-                  {/* <div className='row gx-3 mt-3'>
-                    <div className='col'>
-                      <input className="form-control" type="text" name="state" placeholder='State' required />
-                      <p className='text-danger'>{serror}</p>
-                    </div>
-                    <div className='col'>
-                      <input className="form-control" type="text" name="zip_code" placeholder='Zip' required />
-                    </div>
-                  </div> */}
                   <br />
                   <label>
                     Do you already have an attorney representing you for this claim?
@@ -321,7 +302,6 @@ const Banner = () => {
                       <option value="Myelodysplastic">Myelodysplastic</option>
                       <option value="syndromes (MDS)">syndromes (MDS)</option>
                       <option value="Neurobehavioral effects">Neurobehavioral effects</option>
-                      <option value="No Injury">No Injury</option>
                       <option value="Non-Hodgkin's lymphoma (NHL)">Non-Hodgkin's lymphoma (NHL)</option>
                       <option value="Ovarian cancer">Ovarian cancer</option>
                       <option value="Other Inury">Other Inury</option>
@@ -332,7 +312,6 @@ const Banner = () => {
                       <option value="Scleroderma">Scleroderma</option>
                       <option value="Sinus cancer">Sinus cancer</option>
                       <option value="Thyroid cancer">Thyroid cancer</option>
-                      <option value="No Injury ">No Injury </option>
                       <option value="Other Inury">Other Inury</option>
                     </select>
                   </label>

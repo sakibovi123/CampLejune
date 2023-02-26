@@ -45,7 +45,7 @@
 .article h5 {
     color: #fff;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 20px;
     /* margin-bottom: 20px; */
 }
 
@@ -83,7 +83,7 @@
 
 .cost {
     color: rgb(243, 161, 38);
-    font-size: 40px;
+    font-size: 35px;
 }
 
 .banner-form label input {
@@ -303,7 +303,6 @@ label {
     }
 
     .article h5 {
-
         font-size: 20px;
     }
 
