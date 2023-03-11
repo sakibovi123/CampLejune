@@ -15,18 +15,18 @@ const Camplejeune = () => {
                 </div>
                 <h2 className='text-[#A6192E] lg:text-3xl text-xl font-bold'>Camp Lejeune Water Contamination Lawsuit</h2>
                 <img src="https://i.ibb.co/6w6KvK1/camplejeune.png" alt="" className=' pt-2 pb-3 ' />
-                <h4 className='text-xl font-bold px-3'>If you or your family member, lived or stayed for 30 days for in Camp Lejeune in 1953 to 1987 and suffering a health condition, you can be entitled to the compensation of Million Dollars based on Camp Lejeune Justice ACT 2022!</h4>
                 <div className="floating-icon ">
                     <a href="#form">
-                        <BiChevronsDown color="#0c6fb1" size={55} className="mouse" />
+                        <BiChevronsDown color="#00D100" size={55} className="mouse" />
                     </a>
                 </div>
                 <div className='banner-button'>
-              <a href="/" >
-                <button className='phone-button'>Get Started Now</button>
-              </a>
-              
-            </div>
+                    <a href="/" >
+                        <button className='phone-button'>Get Started Now</button>
+                    </a>
+                </div>
+                <h4 className='text-xl font-bold px-3'>If you or your family member, lived or stayed for 30 days for in Camp Lejeune in 1953 to 1987 and suffering a health condition, you can be entitled to the compensation of Million Dollars based on Camp Lejeune Justice ACT 2022!</h4>
+                
                 {/* <h3 className='text-[#A6192E] font-semibold lg:text-4xl  text-2xl my-3'>Time is limited to file your claim!</h3>
                 <h3 className='font-semibold lg:text-4xl text-2xl'>Apply For Compensation:</h3> */}
                 {/* <img src="https://i.ibb.co/86DqV2T/hands-gesture-ph-blue.png" alt="" className='mx-auto my-8'/> */}
