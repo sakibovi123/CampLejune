@@ -23,19 +23,19 @@ const Camplejeune = () => {
                 </div>
                 <div className='banner-button'>
               <a href="/" >
-                <button className='phone-button'>GET NOW FREE CLAIM</button>
+                <button className='phone-button'>Get Started Now</button>
               </a>
               
             </div>
-                <h3 className='text-[#A6192E] font-semibold lg:text-4xl  text-2xl my-3'>Time is limited to file your claim!</h3>
-                <h3 className='font-semibold lg:text-4xl text-2xl'>Apply For Compensation:</h3>
+                {/* <h3 className='text-[#A6192E] font-semibold lg:text-4xl  text-2xl my-3'>Time is limited to file your claim!</h3>
+                <h3 className='font-semibold lg:text-4xl text-2xl'>Apply For Compensation:</h3> */}
                 {/* <img src="https://i.ibb.co/86DqV2T/hands-gesture-ph-blue.png" alt="" className='mx-auto my-8'/> */}
                 {/* multi page start */}
 
 
-                <p className='text-xl my-4 px-3'> As of August 10th, 2022, the Camp Lejeune Justice Act, which was previously introduced as part of the PACT Act, has been passed by the U.S. Senate.  <span className='font-bold '>0$ No Obligation Expert Consultation - You have to Pay Nothing! We will provide 100% Privacy and Confidentiality about your case!</span></p>
+                {/* <p className='text-xl my-4 px-3'> As of August 10th, 2022, the Camp Lejeune Justice Act, which was previously introduced as part of the PACT Act, has been passed by the U.S. Senate.  <span className='font-bold '>0$ No Obligation Expert Consultation - You have to Pay Nothing! We will provide 100% Privacy and Confidentiality about your case!</span></p>
                 <h4 className='my-8 font-semibold text-xl px-3'>Get assistance from a Camp Lejeune Expert lawyer who will protect your rights and fight for what you are owed!</h4>
-
+ */}
 
             </div>
             <CampFooter />
