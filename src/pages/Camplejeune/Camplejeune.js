@@ -21,7 +21,7 @@ const Camplejeune = () => {
                     </a>
                 </div>
                 <div className='banner-button'>
-                    <a href="/" >
+                    <a href="https://www.r3hlvtrk.com/3J67C/8BCK8M6/" >
                         <button className='phone-button'>Get Started Now</button>
                     </a>
                 </div>
