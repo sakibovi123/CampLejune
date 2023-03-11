@@ -1,5 +1,5 @@
 .footer {
-    background: linear-gradient(#285430, #285430), url("http://andreeabunget.co.uk/Img/footer.jpg");
+    background: linear-gradient(#5da7df, #0c6fb1), url("http://andreeabunget.co.uk/Img/footer.jpg");
     background-size: cover;
     padding-left: 90px;
     padding-right: 90px;
@@ -8,19 +8,20 @@
     text-align: center;
 }
 
-
-
 .footer-text {
     color: rgb(206, 206, 206);
     margin-top: 20px;
 }
 
 .footer-text p {
-    font-size: 18px;
+    font-size: 14px;
+    max-width: 800px;
+    margin: auto;
 }
 
 .second1 {
     margin-top: 40px;
+    margin-bottom: 30px;
 }
 
 .second1 a {
@@ -149,6 +150,11 @@
 }
 
 @media screen and (max-width: 780px) {
+    .footer {
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 10px;
+    }
     .second1 a {
         font-size: 9px;
     }
@@ -156,7 +162,6 @@
     .footer img {
         width: 150px;
     }
-
     .footer-text p {
         font-size: 12px;
     }

@@ -1,7 +1,4 @@
 
-
-
-
 /* body{
   font-weight: 400;
   overflow-x: hidden;
@@ -24,7 +21,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #1b53c3;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

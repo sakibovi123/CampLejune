@@ -1,0 +1,67 @@
+.top-logo{
+    width: 400px;
+    margin: auto;
+}
+.top-header{
+    background: #0c6fb1;
+    height: 50px; 
+}
+.main-body{
+    margin-top: 30px !important;
+    margin-bottom: 50px !important;
+    max-width: 800px;
+    margin: auto;
+}
+.floating-icon {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 10%;
+    bottom: 0;
+    transform: translateX(-50%);
+    cursor: pointer;
+    margin: auto;
+  }
+  
+  .floating-icon a {
+    /* border: 1px solid #212039; */
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: relative;
+    /* left: 50%; */
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mouse {
+    transform: translateY(-25%);
+    animation: bounce 0.8s ease infinite alternate;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(-25%);
+    }
+    100% {
+      transform: translateY(25%);
+    }
+  }
+  
+  @media screen and (max-width: 780px) {
+    .floating-icon {
+      left: 18%;
+    }
+    .top-logo{
+      width: 200px;
+      margin: auto;
+  }
+  }
+
+  

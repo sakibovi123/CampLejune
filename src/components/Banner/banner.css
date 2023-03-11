@@ -101,11 +101,11 @@ button {
 }
 
 .phone-button {
-    background: linear-gradient(90deg, #64aebe, #0E5E6F);
+    background: linear-gradient(90deg, #5da7df, #0c6fb1);
     color: #fff;
     font-style: italic;
     margin-right: 25px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     padding-left: 30px;
     padding-right: 30px;
     font-weight: 700;
@@ -280,7 +280,8 @@ label {
     }
 
     .phone-button {
-        width: 140px;
+        /* width: 140px; */
+        margin-bottom: 10px;
         border-radius: 10px;
         font-size: 15px;
     }

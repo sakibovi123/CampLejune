@@ -9,21 +9,26 @@ import Privacy from './pages/Privacy/Privacy';
 import Terms from './pages/Terms/Terms';
 import Thanks from './pages/Thanks/Thanks';
 import NotFound from './pages/NotFound/NotFound';
+import NewForm from './pages/newForm/NewForm';
+import New from './pages/newForm/New';
+import Camplejeune from './pages/Camplejeune/Camplejeune';
 
 
 function App() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Routes>
-        <Route path='/' element={<Home></Home>}></Route>
+        {/* <Route path='/' element={<Home></Home>}></Route> */}
         <Route path='/privacy-policy' element={<Privacy />}></Route>
         <Route path='/terms-condition' element={<Terms />}></Route>
         <Route path='/thanks' element={<Thanks />}></Route>
-        <Route path='*' element={<NotFound />}></Route>
+        <Route path='/new' element={<New />}></Route>
+        <Route path='/camplejeune' element={<Camplejeune />}></Route>
+        {/* <Route path='*' element={<NotFound />}></Route> */}
       </Routes>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
