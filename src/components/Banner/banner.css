@@ -104,7 +104,7 @@ button {
     background: linear-gradient(90deg, #00D100, #00D100);
     color: #fff;
     font-style: italic;
-    margin-right: 25px;
+    /* margin-right: 25px; */
     margin-bottom: 30px;
     padding-left: 30px;
     padding-right: 30px;
